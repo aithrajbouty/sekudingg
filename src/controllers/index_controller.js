@@ -20,7 +20,3 @@ exports.getWord = (req, res) => {
           })
     }
 }
-
-exports.renderAboutPage = (req, res) => {
-    res.render("about")
-}
