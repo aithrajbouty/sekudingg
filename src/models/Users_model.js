@@ -39,8 +39,6 @@ const UsersSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "preferences"
     }
-})
+}, {timestamps: true})
 
 module.exports = mongoose.model("user", UsersSchema)
-
-//kalo ada masalah nama collectionnya hapus "s" nya aja

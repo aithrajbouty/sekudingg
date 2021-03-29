@@ -19,13 +19,11 @@ app.set("view engine", "hbs")
 //ROUTES
 const indexRoute = require("./routes/index_route")
 const aboutRoute = require("./routes/about_route")
-const postsRoute = require("./routes/posts_route")
-const usersRoute = require("./routes/users_route")
+const authRoute = require("./routes/auth_route")
 
 app.use("/", indexRoute)
 app.use("/about", aboutRoute)
-app.use("/post", postsRoute)
-app.use("/user", usersRoute)
+app.use("/auth", authRoute)
 
 
 //DB
