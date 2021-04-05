@@ -1,0 +1,61 @@
+#app {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.router-link-exact-active {
+    font-weight:bold;
+}
+
+.btn-warning {
+    background: #FFE072;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.row-mt-4 {
+    text-align: center;
+}
+
+.p-3.p-md-5 {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #FFE072;
+}
+
+.navbar-brand {
+    color: #608EB8;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.collapse.navbar-collapse {
+    color: black;
+}
+
+.hero {
+    margin-top:120px;
+}
+
+.profile {
+    margin-top:120px;
+}
+
+.companyprofile {
+    margin-top:120px;
+}
+
+.jumbotron{
+    text-align: center;
+}
+
