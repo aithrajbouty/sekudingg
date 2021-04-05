@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Module from '../views/Module.vue'
+import Modulsaya from '../views/Modulsaya.vue'
 import Contactus from '../views/Contactus.vue'
 import Aboutus from '../views/Aboutus.vue'
 import Faq from '../views/Faq.vue'
@@ -19,6 +20,11 @@ const routes = [
     path: '/module',
     name: 'Module',
     component: Module
+  },
+  {
+    path: '/modulsaya',
+    name: 'Modulsaya',
+    component: Modulsaya
   },
   {
     path: '/contactus',
