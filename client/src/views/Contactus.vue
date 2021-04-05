@@ -1,22 +1,24 @@
 <template>
-  <div>
+  <div class="home">
     <Navbar />
-    <h2>Contact Us</h2>
+    <navbar-module />
+    <div class="container">
+      <contactus-content/>
+
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Navbar from '@/components/Navbar.vue'
+import Navbar from "@/components/Navbar.vue";
+import ContactusContent from "@/components/ContactusContent.vue";
 
 export default {
-  name: 'Contact Us',
+  name: 'Home',
   components: {
-    Navbar
+    Navbar,
+    ContactusContent
   }
-}
+  }
 </script>
-
-<style>
-
-</style>

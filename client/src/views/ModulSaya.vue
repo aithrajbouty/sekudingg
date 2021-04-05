@@ -3,7 +3,7 @@
     <Navbar />
     <navbar-module />
     <div class="container">
-      <module-content />
+      <modul-saya-content/>
 
     </div>
   </div>
@@ -13,14 +13,15 @@
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
 import NavbarModule from "@/components/NavbarModule.vue";
-import ModuleContent from "@/components/ModuleContent.vue";
+import ModulSayaContent from "@/components/ModulSayaContent.vue";
+
 
 export default {
   name: 'Home',
   components: {
     Navbar,
     NavbarModule,
-    ModuleContent
+    ModulSayaContent
   }
   }
 </script>
