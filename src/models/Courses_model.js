@@ -30,6 +30,10 @@ const CoursesSchema = mongoose.Schema({
         type: Number,
         required: true
     },
+    image: {
+        type: String,
+        data: Buffer
+    },
     enrollments: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "enrollments"

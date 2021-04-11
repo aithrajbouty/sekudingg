@@ -4,32 +4,28 @@ const mongoose = require("mongoose")
 const UsersSchema = mongoose.Schema({
     username: {
         type: String,
-        required: true
+        required: [true, "Please include your name"]
     },
     password: {
         type: String,
-        required: true
+        required: [true, "Please include your password"]
     },
     email: {
         type: String,
-        required: true
+        required: [true, "Please include your email"]
     },
     first_name: {
         type: String,
-        required: true
+        required: [true, "Please include your first name"]
     },
-    last_name: {
-        type: String,
-        required: true
-    },
+    last_name: String,
     registration_date: {
         type: Date,
         default: Date.now,
         required: true
     },
     last_login_date: {
-        type: Date,
-        required: true
+        type: Date
     },
     enrollments: [{
         type: mongoose.Schema.Types.ObjectId,

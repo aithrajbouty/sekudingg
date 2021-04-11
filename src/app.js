@@ -1,12 +1,14 @@
-const path = require("path")
+//const path = require("path")
 const express = require("express")
 // const { set } = require("mongoose")
-const app = express()
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 require("dotenv/config")
 
+const app = express()
 
+app.use(cors())
 app.use(bodyParser.json())
 
 //VIEWS
@@ -20,10 +22,12 @@ app.set("view engine", "hbs")
 const indexRoute = require("./routes/index_route")
 const aboutRoute = require("./routes/about_route")
 const authRoute = require("./routes/auth_route")
+const moduleRoute = require("./routes/module_route")
 
 app.use("/", indexRoute)
 app.use("/about", aboutRoute)
 app.use("/auth", authRoute)
+app.use("/module", moduleRoute)
 
 
 //DB
