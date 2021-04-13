@@ -5,6 +5,7 @@
       <Hero />
 
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -12,12 +13,14 @@
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
 import Hero from "@/components/Hero.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: 'Home',
   components: {
     Navbar,
-    Hero
+    Hero,
+    Footer
   }
   }
 </script>
