@@ -2,11 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Module from '../views/Module.vue'
+import Modulsaya from '../views/Modulsaya.vue'
 import Contactus from '../views/Contactus.vue'
 import Aboutus from '../views/Aboutus.vue'
 import Faq from '../views/Faq.vue'
 import Profile from '../views/Profile.vue'
-import Login from '../views/Login.vue'
+import Signup from '../views/Signup.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [
     path: '/module',
     name: 'Module',
     component: Module
+  },
+  {
+    path: '/modulsaya',
+    name: 'Modulsaya',
+    component: Modulsaya
   },
   {
     path: '/contactus',
@@ -42,9 +48,9 @@ const routes = [
     component: Profile
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: Login
+    path: '/signup',
+    name: 'Signup',
+    component: Signup
   },
   {
     path: '/about',
