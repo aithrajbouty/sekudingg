@@ -1,57 +1,57 @@
 <template>
   <div class="logincontent">
       <div class="limiter">
-		<div class="container-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../assets/images/login.png" alt="IMG">
-				</div>
+  <div class="container-login100">
+    <div class="login100-pic js-tilt" data-tilt>
+     <img src="../assets/images/login.png" alt="IMG">
+    </div>
 
-				<form class="login100-form validate-form">
-					<span class="login100-form-title">
-						<strong>Login</strong>
-					</span>
+    <form class="login100-form validate-form">
+     <span class="login100-form-title">
+      <strong>Login</strong>
+     </span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email" style="padding: 0 30px 0 68px;">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<b-icon icon="envelope-fill" aria-hidden="true"></b-icon>
-						</span>
-					</div>
+     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+      <input class="input100" type="text" name="email" placeholder="Email" style="padding: 0 30px 0 68px;">
+      <span class="focus-input100"></span>
+      <span class="symbol-input100">
+       <b-icon icon="envelope-fill" aria-hidden="true"></b-icon>
+      </span>
+     </div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<b-icon icon="lock-fill" aria-hidden="true"></b-icon>
-						</span>
-					</div>
+     <div class="wrap-input100 validate-input" data-validate = "Password is required">
+      <input class="input100" type="password" name="pass" placeholder="Password">
+      <span class="focus-input100"></span>
+      <span class="symbol-input100">
+       <b-icon icon="lock-fill" aria-hidden="true"></b-icon>
+      </span>
+     </div>
 
-					<div class="text-right p-t-12" style="margin-top:10px;">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Password?
-						</a>
-					</div>
+     <div class="text-right p-t-12" style="margin-top:10px;">
+      <span class="txt1">
+       Forgot
+      </span>
+      <a class="txt2" href="#">
+       Password?
+      </a>
+     </div>
 
                     <div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
+      <button class="login100-form-btn">
+       Login
+      </button>
+     </div>
 
-					<div class="text-left p-t-136" style="margin-top:20px; font-size:13px;">
+     <div class="text-left p-t-136" style="margin-top:20px; font-size:13px;">
                         Doesn’t have an account yet? 
-						<a class="txt2" href="#">
-							Sign Up Here
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
-					</div>
-				</form>
-		</div>
-	</div>
+      <a class="txt2" href="#">
+       Sign Up Here
+       <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+      </a>
+     </div>
+    </form>
+  </div>
+ </div>
   </div>
 </template>
 
@@ -63,29 +63,29 @@ export default {
     
 <style>
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+ margin: 0px; 
+ padding: 0px; 
+ box-sizing: border-box;
 }
 
 body, html {
-	height: 100%;
+ height: 100%;
 }
 
 /*---------------------------------------------*/
 a {
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+ font-size: 14px;
+ line-height: 1.7;
+ color: #666666;
+ margin: 0px;
+ transition: all 0.4s;
+ -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+ outline: none !important;
 }
 
 a:hover {
@@ -95,26 +95,26 @@ a:hover {
 
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
+ margin: 0px;
 }
 
 p {
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
+ font-size: 14px;
+ line-height: 1.7;
+ color: #666666;
+ margin: 0px;
 }
 
 ul, li {
-	margin: 0px;
-	list-style-type: none;
+ margin: 0px;
+ list-style-type: none;
 }
 
 
 /*---------------------------------------------*/
 input {
-	outline: none;
-	border: none;
+ outline: none;
+ border: none;
 }
 
 textarea {
@@ -148,17 +148,17 @@ textarea:-ms-input-placeholder { color: #999999; }
 
 /*---------------------------------------------*/
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+ outline: none !important;
+ border: none;
+ background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+ cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+ border: none !important;
 }
 
 
