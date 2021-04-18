@@ -1,7 +1,5 @@
-//const path = require("path")
 const express = require("express")
-// const { set } = require("mongoose")
-const mongoose = require("mongoose")
+const { pool } = require("./dbConfig")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 require("dotenv/config")
@@ -10,35 +8,16 @@ const app = express()
 
 app.use(cors())
 app.use(bodyParser.json())
-
-//VIEWS
-app.use(express.urlencoded({extended: false}))
 app.use(express.json())
-app.use(express.static("public"))
-app.set("views", "views")
-app.set("view engine", "hbs")
 
-//ROUTES
-const indexRoute = require("./routes/index_route")
-const aboutRoute = require("./routes/about_route")
+// //ROUTES
 const authRoute = require("./routes/auth_route")
 const moduleRoute = require("./routes/module_route")
+// //const aboutUsRoute = require("./routes/aboutUs_route")
 
-app.use("/", indexRoute)
-app.use("/about", aboutRoute)
 app.use("/auth", authRoute)
 app.use("/module", moduleRoute)
-
-
-//DB
-mongoose.connect(
-    process.env.DB_CONNECTION, 
-    {useNewUrlParser: true, useUnifiedTopology: true}, 
-    () => console.log("Connected to database!")
-)
-
-const db = mongoose.connection
-db.on("error", console.error.bind(console, "MongoDB connection error:"))
+// //app.use("/aboutUs", aboutUsRoute)
 
 //LISTEN
 app.listen(3000, () => {

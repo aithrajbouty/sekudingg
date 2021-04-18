@@ -9,7 +9,7 @@ const controller = require("../controllers/auth_controller")
 // router.patch("/:userId", controller.updateUser)
 
 router.post("/register", controller.register)
-router.post("/login", controller.login)
-router.get("/", controller.selectAllUsers)
+// router.post("/login", controller.login)
+// router.get("/", controller.selectAllUsers)
 
 module.exports = router
