@@ -136,30 +136,47 @@
 
 
 
-const User = require("../models/Users_model")
-const bcrypt = require("bcrypt")
-const jwt = require("jsonwebtoken")
+// const User = require("../models/Users_model")
+// const bcrypt = require("bcrypt")
+// const jwt = require("jsonwebtoken")
 
-exports.register = (req, res) => {
-    let {username, email, password} = req.body;
+// exports.register = (req, res) => {
+//     let {username, email, password} = req.body;
 
-    console.log({
-        username,
-        email,
-        password
-    })
+//     console.log({
+//         username,
+//         email,
+//         password
+//     })
 
-    let errors = [];
+//     let errors = [];
 
-    if (!username || !email || !password){
-        errors.push({message: "Please enter all fields"})
-    }
+//     if (!username || !email || !password){
+//         errors.push({message: "Please enter all fields"})
+//     }
 
-    if(password.length < 6){
-        errors.push({message: "Password should be at least 6 characters"})
-    }
+//     if(password.length < 6){
+//         errors.push({message: "Password should be at least 6 characters"})
+//     }
 
-    if(errors.length > 0){
-        res.render("register", { errors })
+//     if(errors.length > 0){
+//         res.render("register", { errors })
+//     }
+// }
+
+
+const { pool } = require("../dbConfig");
+
+exports.selectAllUsers = async (req, res) => {
+    try{
+        const users = await pool.query("SELECT * FROM users")
+
+        res.json(users.rows)
+    }catch(err){
+        res.json({message: err})
     }
 }
+
+
+
+
