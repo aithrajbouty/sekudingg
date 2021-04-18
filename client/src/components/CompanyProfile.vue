@@ -79,7 +79,7 @@
           <div class="row">
             <div class="column">
               <div class="card">
-                <img src="../assets/images/upinipin.jpg" alt="Jane" style="width:100%">
+                <img src="../assets/images/kefilpic.jpg" alt="Jane" style="width:100%">
                 <div class="container">
                   <br>
                   <h2>Kefilino Khalifa</h2>
@@ -93,7 +93,7 @@
 
             <div class="column">
               <div class="card">
-                <img src="../assets/images/upinipin.jpg" alt="Mike" style="width:100%">
+                <img src="../assets/images/aithrapic.jpg" alt="Mike" style="width:100%">
                 <div class="container">
                   <br>
                   <h2>Aithra Junia</h2>
@@ -107,7 +107,7 @@
 
             <div class="column">
               <div class="card">
-                <img src="../assets/images/upinipin.jpg" alt="John" style="width:100%">
+                <img src="../assets/images/hanapic.jpg" alt="John" style="width:100%">
                 <div class="container">
                   <br>
                   <h2>Hana Meilina</h2>

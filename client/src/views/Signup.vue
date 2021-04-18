@@ -1,9 +1,8 @@
 <template>
   <div class="home">
     <Navbar />
-    <navbar-module />
     <div class="container">
-      <contactus-content/>
+      <signup-content/>
 
     </div>
   </div>
@@ -12,13 +11,14 @@
 <script>
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
-import ContactusContent from "@/components/ContactusContent.vue";
+import SignupContent from "@/components/SignupContent.vue";
+
 
 export default {
   name: 'Home',
   components: {
     Navbar,
-    ContactusContent
+    SignupContent
   }
   }
 </script>

@@ -6,17 +6,17 @@
             <div class="col-md-6">
                 <div class="d-flex h-100">
                     <div class="justify-content-center align-self-center">
-                        <h2>Learn to code <strong>for free</strong>, <br> with <strong>Sekuuuding!</strong></h2>
+                        <h2>Learn to code <strong style="color: #608EB8;">for free</strong>, <br> with <strong style="color: #608EB8;">Sekuuuding!</strong></h2>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <button class="btn btn-lg btn-warning"><strong>Start Learning Now !</strong></button>
                     </div>
                 </div>
             </div>
       <div class="col-md-6">
-          <img src="../assets/images/myhero.png" width="100%"/>
+          <img src="../assets/images/pict-a.svg" width="100%"/>
       </div>
   </div>
-  <br><br>
+  <br><br><br><br><br><br>
   <div class="text-center">
     <h2 class="text-center"><strong>How it works ?</strong></h2>
   </div>
@@ -54,85 +54,92 @@
           <router-link to="/module" class="btn btn-warning float-right"><b-icon-file-arrow-down></b-icon-file-arrow-down><strong> View All Our Courses</strong> </router-link>
         </div>
       </div>
+      
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row">
+            <div class="col-md-6 col-xl-4">
+              <div class="card card-stats mb-4" show-footer-line="true">
+                <!----><!----><!---->
+                <div class="card-body">
+                  <!----><!---->
+                  <div class="row">
+                    <div class="col">
+                      <div class="text-center">
+                      <img src="../assets/images/webdev.png" width="100%"/>  
+                      <span class="h4 font-weight-bold mb-0">Web Development</span>
+                      </div>
+                      </div>
+                          </div>
+                            </div>
+                            <!----><!----><!----><!---->
+                            </div>
+                            </div>
+                            <div class="col-md-6 col-xl-4">
+                              <div class="card card-stats mb-4" show-footer-line="true">
+                                <!----><!----><!---->
+                                <div class="card-body">
+                                  <!----><!---->
+                                  <div class="row">
+                                    <div class="col">
+                                      <div class="text-center">
+                                        <img src="../assets/images/webdesign.png" width="84%"/>
+                                        <span class="h4 font-weight-bold mb-0">Web Design</span>
+                                      </div>
+                                      </div>
+                                          </div>
+                                            </div><!----><!----><!----><!---->
+                                            </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-4">
+                                              <div class="card card-stats mb-4" show-footer-line="true">
+                                                <!----><!----><!---->
+                                                <div class="card-body"><!----><!---->
+                                                <div class="row">
+                                                  <div class="col">
+                                                    <div class="text-center">
+                                                      <img src="../assets/images/datascience.png" width="81%"/>
+                                                      <span class="h4 font-weight-bold mb-0">Data Science</span>
+                                                    </div>
+                                                  </div>
+                                                      </div>
+                                                        </div><!----><!----><!----><!---->
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-xl-4">
+                                                          <div class="card card-stats mb-4" show-footer-line="true">
+                                                            <!----><!----><!---->
+                                                            <div class="card-body"><!----><!---->
+                                                            <div class="row">
+                                                              <div class="col">
+                                                                <div class="text-center">
+                                                                  <img src="../assets/images/comscience.png" width="84%"/>
+                                                                  <span class="h4 font-weight-bold mb-0">Computer Science</span>
+                                                                </div>
+                                                                </div>
+                                                                    </div>
+                                                                      </div><!----><!----><!----><!---->
+                                                                      </div>
+                                                                      </div>
 
-      <div class="row mb-3">
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              title="Web Development"
-              img-src="https://img.icons8.com/bubbles/100/000000/internet.png"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-4"
-            >
-            <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              title="Data Science"
-              img-src="https://img.icons8.com/bubbles/100/000000/combo-chart.png"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-4"
-            >
-            <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              title="Computer Science"
-              img-src="https://img.icons8.com/bubbles/100/000000/programming-flag.png"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-4"
-            >
-            <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              title="Web Design"
-              img-src="https://img.icons8.com/bubbles/100/000000/design.png"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-4"
-            >
-            <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              href="#"
-              title="Mobile Development"
-              img-src="https://img.icons8.com/bubbles/100/000000/broken-phone.png"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-4"
-            >
-            <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-          </div>
-        </div>
-    </div>
+                                                        <div class="col-md-6 col-xl-4">
+                                                          <div class="card card-stats mb-4" show-footer-line="true">
+                                                            <!----><!----><!---->
+                                                            <div class="card-body"><!----><!---->
+                                                            <div class="row">
+                                                              <div class="col">
+                                                                <div class="text-center">
+                                                                  <img src="../assets/images/mobiledev.png" width="84%"/>
+                                                                  <span class="h4 font-weight-bold mb-0">Mobile Development</span>
+                                                                </div>
+                                                                </div>
+                                                                    </div>
+                                                                      </div><!----><!----><!----><!---->
+                                                                      </div>
+                                                                      </div>
+                                                                      </div>
+                                                                      </div>
+                                                                      </div>
 
     <div class="mt-4">
     <h2><strong>Our Testimoni</strong></h2>
@@ -164,7 +171,7 @@ working through the program, I was offered a job as a front...
   <div class="d-sm-block d-md-none">
       <div class="row mt-4">
           <div class="col-md-6 mb-3">
-          <img src="../assets/images/myhero.png" width="100%"/>
+          <img src="../assets/images/pict-a.svg" width="100%"/>
       </div>
       <div class="col-md-6">
           <div class="d-flex h-100">
@@ -187,5 +194,18 @@ export default {
 </script>
 
 <style>
+.hero{
+  max-width: 1190px;
+  background: url('https://pbs.twimg.com/media/Eyl8T7hU4AAc0Ur?format=png&name=small');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 600px;
+  position: absolute;
+}
+.d-none{
+  margin-top: 150px;
+}
+
 
 </style>
