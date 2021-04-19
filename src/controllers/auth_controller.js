@@ -1,7 +1,8 @@
 const { pool } = require("../dbConfig");
 const bcrypt = require("bcrypt")
 const jwtGenerator = require("../utils/jwtGenerator")
-const validInfo = require("../middleware/validInfo")
+const validInfo = require("../middleware/validInfo");
+const { verify } = require("jsonwebtoken");
 
 exports.register = async (req,res) => {
     try{
@@ -39,7 +40,7 @@ exports.register = async (req,res) => {
     }
 }
 
-exports.login = validInfo, async (req, res) => {
+exports.login = async (req, res) => {
     try{
         //1. destructure the req.body
         const { email, password } = req.body
@@ -80,5 +81,14 @@ exports.selectAllUsers = async (req, res) => {
         res.json(users.rows)
     }catch(err){
         res.json({message: err})
+    }
+}
+
+exports.isVerified = async (req, res) => {
+    try {
+        res.json(true)
+    } catch (err) {
+        console.error(err.message)
+        res.status(500).send("Server Error")
     }
 }
