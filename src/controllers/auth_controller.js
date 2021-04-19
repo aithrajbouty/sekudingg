@@ -1,6 +1,7 @@
 const { pool } = require("../dbConfig");
 const bcrypt = require("bcrypt")
 const jwtGenerator = require("../utils/jwtGenerator")
+const validInfo = require("../middleware/validInfo")
 
 exports.register = async (req,res) => {
     try{
@@ -38,7 +39,7 @@ exports.register = async (req,res) => {
     }
 }
 
-exports.login = async (req, res) => {
+exports.login = validInfo, async (req, res) => {
     try{
         //1. destructure the req.body
         const { email, password } = req.body
