@@ -8,16 +8,16 @@ const app = express()
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(express.json())
+app.use(express.json()) //req.body
 
-// //ROUTES
+// ROUTES
 const authRoute = require("./routes/auth_route")
 const moduleRoute = require("./routes/module_route")
-// //const aboutUsRoute = require("./routes/aboutUs_route")
+// const aboutUsRoute = require("./routes/aboutUs_route")
 
 app.use("/auth", authRoute)
 app.use("/module", moduleRoute)
-// //app.use("/aboutUs", aboutUsRoute)
+// app.use("/aboutUs", aboutUsRoute)
 
 //LISTEN
 app.listen(3000, () => {

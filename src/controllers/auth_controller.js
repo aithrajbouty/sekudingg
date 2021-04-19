@@ -1,171 +1,76 @@
-// const { response } = require("express")
-// const User = require("../models/Users_model")
-
-// exports.renderUserPage = async (req, res) => {
-//     try{
-//         const users = await User.find()
-//         res.json(users)
-//     }catch(err){
-//         res.json({message: err})
-//     }
-// }
-
-// exports.submitUser = async (req, res) => {
-//     const user = new User({
-//         username: req.body.username,
-//         password: req.body.password,
-//         email: req.body.email,
-//         first_name: req.body.first_name,
-//         last_name: req.body.last_name,
-//         registration_date: req.body.registration_date,
-//         last_login_date: req.body.last_login_date
-//     })
-
-//     try{
-//         const savedUser = await user.save()
-//         res.json(savedUser)
-//     }catch(err){
-//         res.json({message: err })
-//     }
-// }
-
-// //specific user
-// exports.specificUser = async (req, res) => {
-//     try{
-//         const user = await User.findById(req.params.userId)
-//         res.json(user)
-//     }catch(err){
-//         res.json({message: err })
-//     }
-// }
-
-// // delete specific user
-// exports.deleteUser = async (req, res) => {
-//     try{
-//         const removedUser = await User.remove({_id: req.params.userId})
-//         res.json(removedUser)
-//     }catch(err){
-//         res.json({message: err })
-//     }
-// }
-
-// //update specific user
-// exports.updateUser = async (req, res) => {
-//     try{
-//         const updatedUser = await User.updateOne(
-//             { _id: req.params.userId },
-//             { $set: { username: req.body.username } }
-//         )
-//         res.json(updatedUser)
-//     }catch(err){
-//         res.json({message: err })
-//     }
-// }
-
-
-
-
-
-
-
-// const User = require("../models/Users_model")
-// const bcrypt = require("bcryptjs")
-// const jwt = require("jsonwebtoken")
-
-// exports.register = (req, res, next) => {
-//     bcrypt.hash(req.body.password, 10, function(err, hashedPass){
-//         if(err){
-//             res.json({ error: err })
-//         }
-
-//         let user = new User ({
-//             username: req.body.username,
-//             password: hashedPass,
-//             email: req.body.email,
-//             first_name: req.body.first_name,
-//             last_name: req.body.last_name,
-//             registration_date: req.body.registration_date,
-//             last_login_date: req.body.last_login_date
-//         })
-//         user.save()
-//         .then(user => {
-//             res.json({ message: "User Added Successfully!" })
-//         })
-//         .catch(error =>{
-//             res.json({ message: "An error occured!" })
-//         })
-//     })
-// }
-
-// exports.login = (req, res, next) => {
-//     var user_name = req.body.username
-//     var password = req.body.password
-
-//     User.findOne({$or: [{username:user_name}, {email:user_name}]})
-//     .then(user => {
-//         if(user){
-//             bcrypt.compare(password, user.password, function(err, result) {
-//                 if(err){
-//                     res.json({ error: err })
-//                 }
-//                 if(result){
-//                     let token = jwt.sign({name: user.name}, "verySecretValue", {expiresIn: "1h"})
-//                     res.json({ 
-//                         message: "Login Successful!", 
-//                         token 
-//                     })
-//                 }else{
-//                     res.json({ message: "Password does not matched!" })
-//                 }
-//             })
-//         }else{
-//             res.json({ message: "No user found!" })
-//         }
-//     })
-// }
-
-// exports.selectAllUsers = async (req, res) => {
-//     try{
-//         const users = await User.find()
-//         res.json(users)
-//     }catch(err){
-//         res.json({message: err})
-//     }
-// }
-
-
-
-
-// const User = require("../models/Users_model")
-// const bcrypt = require("bcrypt")
-// const jwt = require("jsonwebtoken")
-
-// exports.register = (req, res) => {
-//     let {username, email, password} = req.body;
-
-//     console.log({
-//         username,
-//         email,
-//         password
-//     })
-
-//     let errors = [];
-
-//     if (!username || !email || !password){
-//         errors.push({message: "Please enter all fields"})
-//     }
-
-//     if(password.length < 6){
-//         errors.push({message: "Password should be at least 6 characters"})
-//     }
-
-//     if(errors.length > 0){
-//         res.render("register", { errors })
-//     }
-// }
-
-
 const { pool } = require("../dbConfig");
+const bcrypt = require("bcrypt")
+const jwtGenerator = require("../utils/jwtGenerator")
+
+exports.register = async (req,res) => {
+    try{
+        //1. destructure the req.body (name, email, password)
+        const { username, email, first_name, last_name, password } = req.body
+
+        //2. check if user exists (if user exist then throw error)
+        const user = await pool.query("SELECT * FROM users WHERE email = $1", [
+            email
+        ])
+
+        if(user.rows.length !== 0){
+            return res.status(401).send("User already exists")
+        }
+
+        //3. Bcrypt the user password
+        const saltRound = 10
+        const salt = await bcrypt.genSalt(saltRound)
+
+        const bcryptPassword = await bcrypt.hash(password, salt)
+
+        //4. enter the new user inside our database
+        const newUser = await pool.query("INSERT INTO users (username, email, first_name, last_name, password) VALUES ($1, $2, $3, $4, $5) RETURNING *", 
+            [username, email, first_name, last_name, bcryptPassword]
+        )
+
+        //5. generating our jwt token
+        const token = jwtGenerator(newUser.rows[0].id)
+
+        res.json({ token })
+
+    }catch (err) {
+        console.error(err.message)
+        res.status(500).send("Server Error")
+    }
+}
+
+exports.login = async (req, res) => {
+    try{
+        //1. destructure the req.body
+        const { email, password } = req.body
+
+        //2. check if user doesn't exist (if not,throw err)
+        const user = await pool.query("SELECT * FROM users WHERE email = $1", [
+            email
+        ])
+
+        if(user.rows.length === 0){ //user doesnt exist
+            return res.status(401).json("Password or email is incorrect")
+        }
+
+        //3. check if incomming password is the same as the database password
+        const validPassword = await bcrypt.compare(
+            password, 
+            user.rows[0].password
+        )
+        
+        if(!validPassword){
+            return res.status(401).json("Password or email is incorrect")
+        }
+
+        //4. give them the jwt token
+        const token = jwtGenerator(user.rows[0].id)
+
+        res.json({ token })
+    }catch (err) {
+        console.error(err.message)
+        res.status(500).send("Server Error")
+    }
+}
 
 exports.selectAllUsers = async (req, res) => {
     try{
@@ -176,7 +81,3 @@ exports.selectAllUsers = async (req, res) => {
         res.json({message: err})
     }
 }
-
-
-
-
