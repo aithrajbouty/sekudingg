@@ -2,12 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Module from '../views/Module.vue'
-import Modulsaya from '../views/ModulSaya.vue'
+import Modulsaya from '../views/Modulsaya.vue'
 import Contactus from '../views/Contactus.vue'
 import Aboutus from '../views/Aboutus.vue'
 import Faq from '../views/Faq.vue'
 import Profile from '../views/Profile.vue'
-import Signup from '../views/Signup.vue'
+import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 
 Vue.use(VueRouter)
@@ -49,9 +49,9 @@ const routes = [
     component: Profile
   },
   {
-    path: '/signup',
-    name: 'Signup',
-    component: Signup
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/about',
