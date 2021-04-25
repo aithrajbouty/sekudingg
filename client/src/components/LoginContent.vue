@@ -1,57 +1,38 @@
 <template>
   <div class="logincontent">
-      <div class="limiter">
-  <div class="container-login100">
-    <div class="login100-pic js-tilt" data-tilt>
-     <img src="../assets/images/login.png" alt="IMG">
+    <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="../assets/images/webdevcoba.png" class="image"> </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+                  <div class="text-center">
+                      <h3>Login</h3> </div>
+                    <div class="row px-3"> 
+                    <input class="mb-4" type="text" name="email" placeholder="Email" style="border-radius: 25px;">
+                    </div>
+                    <div class="row px-3"> 
+                      <input type="password" name="password" placeholder="Password" style="border-radius: 25px;"> </div>
+                    <div class="row px-3 mt-3 mb-4">
+                        <div class="custom-control custom-checkbox custom-control-inline"> 
+                          <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
+                          <label for="chk1" class="custom-control-label text-sm">Show Password</label> </div> 
+                          <a href="#" class="ml-auto mb-0 text-warning">Forgot Password?</a>
+                    </div>
+                    <div class="row mb-3 px-3"> 
+                      <button type="submit" class="btn btn-warning text-center" style="width: 150px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;">Login</button> 
+                      </div>
+                    <div class="row mb-4 px-3"> 
+                      <small class="font-weight-bold">Doesn’t have an account yet?  <a class="text-warning">Sign up here</a></small> </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <form class="login100-form validate-form">
-     <span class="login100-form-title">
-      <strong>Login</strong>
-     </span>
-
-     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-      <input class="input100" type="text" name="email" placeholder="Email" style="padding: 0 30px 0 68px;">
-      <span class="focus-input100"></span>
-      <span class="symbol-input100">
-       <b-icon icon="envelope-fill" aria-hidden="true"></b-icon>
-      </span>
-     </div>
-
-     <div class="wrap-input100 validate-input" data-validate = "Password is required">
-      <input class="input100" type="password" name="pass" placeholder="Password">
-      <span class="focus-input100"></span>
-      <span class="symbol-input100">
-       <b-icon icon="lock-fill" aria-hidden="true"></b-icon>
-      </span>
-     </div>
-
-     <div class="text-right p-t-12" style="margin-top:10px;">
-      <span class="txt1">
-       Forgot
-      </span>
-      <a class="txt2" href="#">
-       Password?
-      </a>
-     </div>
-
-                    <div class="container-login100-form-btn">
-      <button class="login100-form-btn">
-       Login
-      </button>
-     </div>
-
-     <div class="text-left p-t-136" style="margin-top:20px; font-size:13px;">
-                        Doesn’t have an account yet? 
-      <a class="txt2" href="#">
-       Sign Up Here
-       <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-      </a>
-     </div>
-    </form>
-  </div>
- </div>
+</div>
   </div>
 </template>
 
@@ -74,428 +55,94 @@ export default {
 </script>
     
 <style>
-* {
- margin: 0px; 
- padding: 0px; 
- box-sizing: border-box;
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px
 }
 
-body, html {
- height: 100%;
+.card2 {
+    margin: 0px 40px
 }
 
-/*---------------------------------------------*/
-a {
- font-size: 14px;
- line-height: 1.7;
- color: #666666;
- margin: 0px;
- transition: all 0.4s;
- -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
+.image {
+    width: 360px;
+    height: 280px
 }
 
-a:focus {
- outline: none !important;
+.border-line {
+    border-right: 1px solid #EEEEEE
 }
 
-a:hover {
-    text-decoration: none;
-    color:  #FEF9C7;;
+.text-sm {
+    font-size: 14px !important
 }
 
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
- margin: 0px;
-}
-
-p {
- font-size: 14px;
- line-height: 1.7;
- color: #666666;
- margin: 0px;
-}
-
-ul, li {
- margin: 0px;
- list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
-input {
- outline: none;
- border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
-
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
-
-input::-webkit-input-placeholder { color: #999999; }
-input:-moz-placeholder { color: #999999; }
-input::-moz-placeholder { color: #999999; }
-input:-ms-input-placeholder { color: #999999; }
-
-textarea::-webkit-input-placeholder { color: #999999; }
-textarea:-moz-placeholder { color: #999999; }
-textarea::-moz-placeholder { color: #999999; }
-textarea:-ms-input-placeholder { color: #999999; }
-
-/*---------------------------------------------*/
-button {
- outline: none !important;
- border: none;
- background: transparent;
-}
-
-button:hover {
- cursor: pointer;
-}
-
-iframe {
- border: none !important;
-}
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
-.txt1 { 
-  font-size: 13px;
-  line-height: 1.5;
-  color: #ffffff;
-}
-
-.txt2 {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #ffffff;
-}
-
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
-
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-login100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-}
-
-.wrap-login100 {
-  width: 960px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 177px 130px 33px 95px;
-}
-
-/*------------------------------------------------------------------
-[  ]*/
-.login100-pic {
-  width: 316px;
-}
-
-.login100-pic img {
-  max-width: 100%;
-}
-
-
-/*------------------------------------------------------------------
-[  ]*/
-.login100-form {
-  width: 290px;
-}
-
-.login100-form-title {
-  font-size: 24px;
-  color: #333333;
-  line-height: 1.2;
-  text-align: center;
-
-  width: 100%;
-  display: block;
-  padding-bottom: 54px;
-}
-
-
-/*---------------------------------------------*/
-.wrap-input100 {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  margin-bottom: 10px;
-}
-
-.input100 {
-  font-size: 15px;
-  line-height: 1.5;
-  color: #666666;
-
-  display: block;
-  width: 100%;
-  background: #e6e6e6;
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 30px 0 68px;
-}
-
-
-/*------------------------------------------------------------------
-[ Focus ]*/
-.focus-input100 {
-  display: block;
-  position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 0px 0px;
-  color: rgba(87,184,70, 0.8);
-}
-
-.input100:focus + .focus-input100 {
-  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
-  animation: anim-shadow 0.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 70px 25px;
-    opacity: 0;
-  }
-}
-
-@keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 70px 25px;
-    opacity: 0;
-  }
-}
-
-.symbol-input100 {
-  font-size: 15px;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding-left: 35px;
-  pointer-events: none;
-  color: #666666;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.input100:focus + .focus-input100 + .symbol-input100 {
-  color:  #FEF9C7;;
-  padding-left: 28px;
-}
-
-/*------------------------------------------------------------------
-[ Button ]*/
-.container-login100-form-btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.login100-form-btn {
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: bold;
-  color: #564C4C;;
-  text-transform: uppercase;
-
-  width: 100%;
-  height: 50px;
-  border-radius: 25px;
-  background:  #FEF9C7;;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 25px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.login100-form-btn:hover {
-  background: #333333;
-}
-
-
-
-/*------------------------------------------------------------------
-[ Responsive ]*/
-
-
-
-@media (max-width: 992px) {
-  .wrap-login100 {
-    padding: 177px 90px 33px 85px;
-  }
-
-  .login100-pic {
-    width: 35%;
-  }
-
-  .login100-form {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .wrap-login100 {
-    padding: 100px 80px 33px 80px;
-  }
-
-  .login100-pic {
-    display: none;
-  }
-
-  .login100-form {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .wrap-login100 {
-    padding: 100px 15px 33px 15px;
-  }
-}
-
-
-/*------------------------------------------------------------------
-[ Alert validate ]*/
-
-.validate-input {
-  position: relative;
-}
-
-.alert-validate::before {
-  content: attr(data-validate);
-  position: absolute;
-  max-width: 70%;
-  background-color: white;
-  border: 1px solid #c80000;
-  border-radius: 13px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 8px;
-  pointer-events: none;
-
-  font-family: Montserrat-Medium;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.alert-validate::after {
-  content: "\f06a";
-  display: block;
-  position: absolute;
-  color: #c80000;
-  font-size: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 13px;
-}
-
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
+::placeholder {
+    color: #BDBDBD;
     opacity: 1;
-  }
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+@media screen and (max-width: 991px) {
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
 }
 </style>
