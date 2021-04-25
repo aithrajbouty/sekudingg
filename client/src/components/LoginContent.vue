@@ -57,7 +57,19 @@
 
 <script>
 export default {
-    name : 'LoginContent'
+  name : 'LoginContent',
+  data() {
+    return {
+      register: {
+        email: "",
+        password: ""
+      }
+    };
+  },
+
+  methods: {
+    
+  }
 }
 </script>
     

@@ -21,13 +21,26 @@
           <br />
           <form @submit.prevent="registerUser">
             <div class="form-group">
-              <label for="fullname">Full Name</label>
+              <label for="name">Full Name</label>
               <input
                 type="text"
-                name="name"
-                id="name"
+                name="full_name"
+                id="full_name"
                 class="form-control"
                 placeholder="Full Name"
+                v-model="full_name" required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="form-control"
+                placeholder="Username"
+                v-model="username" required
               />
             </div>
 
@@ -39,6 +52,7 @@
                 id="email"
                 class="form-control"
                 placeholder="Email"
+                v-model="email" required
               />
             </div>
 
@@ -50,17 +64,7 @@
                 id="password"
                 class="form-control"
                 placeholder="Password"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="confirmpassword">Confirm Password</label>
-              <input
-                type="password"
-                name="confirmpassword"
-                id="confirmpassword"
-                class="form-control"
-                placeholder="Confirm Password"
+                v-model="password" required
               />
             </div>
 
@@ -87,37 +91,37 @@
 </style>
 
 <script>
+const API_URL = "http://localhost:3000/auth/register"
 // import swal from "sweetalert";
 export default {
   data() {
     return {
-      register: {
-        name: "",
+        full_name: "",
+        username: "",
         email: "",
         password: ""
-      }
-    };
+    }
   },
+
   methods: {
     async registerUser() {
+      const{ full_name, username, email, password } = this.$data
+
+      const body = {full_name, username, email, password}
+
       try {
-        let response = await this.$http.post("/user/register", this.register);
-        console.log(response);
-        let token = response.data.token;
-        if (token) {
-          localStorage.setItem("jwt", token);
-          this.$router.push("/");
-          // swal("Success", "Registration Was successful", "success");
-        } else {
-          // swal("Error", "Something Went Wrong", "Error");
-        }
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(body)
+        })
+
+        const parseRes = await response.json()
+
+        console.log(parseRes)
+
       } catch (err) {
-        let error = err.response;
-        if (error.status == 409) {
-          // swal("Error", error.data.message, "error");
-        } else {
-          // swal("Error", error.data.err.message, "error");
-        }
+        console.error(err.message)  
       }
     }
   }
