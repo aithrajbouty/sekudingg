@@ -43,7 +43,7 @@
                 <option value="indonesia">Indonesia</option>
                 <option value="usa">USA</option>
                 </select>
-                <label for="subject">Subject</label>
+                <label for="subject" style="margin-top:20px;">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
                 <input type="submit" value="Submit">
             </form>
