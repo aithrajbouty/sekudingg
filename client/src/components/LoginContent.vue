@@ -8,12 +8,13 @@
                     <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="../assets/images/webdevcoba.png" class="image"> </div>
                 </div>
             </div>
-            <div class="col-lg-6" @submit.prevent="loginUser">
+            <div class="col-lg-6">
+            <form @submit.prevent="loginUser">
                 <div class="card2 card border-0 px-4 py-5">
                     <div class="text-center">
                         <h3>Login</h3> 
                     </div>
-                    <div class="row px-3"> 
+                    <div class="row px-3 form-group"> 
                         <input 
                             class="mb-4" 
                             type="text" 
@@ -23,7 +24,7 @@
                             v-model="email" required
                         />
                     </div>
-                    <div class="row px-3"> 
+                    <div class="row px-3 form-group"> 
                         <input 
                             type="password" 
                             name="password" 
@@ -51,6 +52,7 @@
                         <small class="font-weight-bold">Doesn’t have an account yet?  <a class="text-warning">Sign up here</a></small> 
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
