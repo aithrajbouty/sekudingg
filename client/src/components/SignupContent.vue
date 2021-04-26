@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="signupc">
     <div class="row mb-3">
       <div class="col-md-7 mt-7">
         <div>

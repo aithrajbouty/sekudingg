@@ -1,6 +1,6 @@
 <template>
   <div class="profilec">
-      <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center profile-header" style="min-height: 600px; background-image: url('https://pbs.twimg.com/media/EyAKX1lW8AU7nD9?format=jpg&name=large'); background-size: cover; background-position: center top;">
+      <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center profile-header" style="min-height: 600px; background-image: url('https://lh5.googleusercontent.com/proxy/yiUEVo8AYFveJlYj_Sbz-qcMP9n3bikVMHIKBXIDiybAkcNGuSI3xVkK4EPIGPxPL9LOhCz5_3pZp-SIiMqgmkbM3Y10Ny7iYw4zbe8QIcQjCvGocRCn9cOfOw=w1200-h630-p-k-no-nu'); background-size: cover; background-position: center top;">
         <div class="container-fluid">
             <span class="mask bg-gradient-success opacity-8"></span>
             <div class="d-flex align-items-center container-fluid">
@@ -18,7 +18,7 @@
                             <div class="row justify-content-center">
                                 <div class="card-profile-image">
                                  <a href="#">
-                                     <img src="../assets/images/raihanshen.png" class="rounded-circle"></a>
+                                     <img src="../assets/images/aithrapic.jpg" width="50%" class="rounded-circle"></a>
                                     </div>
                                     </div>
                                     <div class="card-body pt-0"><!----><!---->
