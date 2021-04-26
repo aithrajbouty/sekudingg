@@ -8,26 +8,48 @@
                     <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="../assets/images/webdevcoba.png" class="image"> </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" @submit.prevent="loginUser">
                 <div class="card2 card border-0 px-4 py-5">
-                  <div class="text-center">
-                      <h3>Login</h3> </div>
-                    <div class="row px-3"> 
-                    <input class="mb-4" type="text" name="email" placeholder="Email" style="border-radius: 25px;">
+                    <div class="text-center">
+                        <h3>Login</h3> 
                     </div>
                     <div class="row px-3"> 
-                      <input type="password" name="password" placeholder="Password" style="border-radius: 25px;"> </div>
+                        <input 
+                            class="mb-4" 
+                            type="text" 
+                            name="email" 
+                            placeholder="Email" 
+                            style="border-radius: 25px;" 
+                            v-model="email" required
+                        />
+                    </div>
+                    <div class="row px-3"> 
+                        <input 
+                            type="password" 
+                            name="password" 
+                            placeholder="Password" 
+                            style="border-radius: 25px;" 
+                            v-model="password" required
+                        /> 
+                    </div>
                     <div class="row px-3 mt-3 mb-4">
                         <div class="custom-control custom-checkbox custom-control-inline"> 
-                          <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
-                          <label for="chk1" class="custom-control-label text-sm">Show Password</label> </div> 
-                          <a href="#" class="ml-auto mb-0 text-warning">Forgot Password?</a>
+                            <input 
+                                id="chk1" 
+                                type="checkbox" 
+                                name="chk" 
+                                class="custom-control-input"
+                            /> 
+                            <label for="chk1" class="custom-control-label text-sm">Show Password</label> 
+                        </div> 
+                        <a href="#" class="ml-auto mb-0 text-warning">Forgot Password?</a>
                     </div>
                     <div class="row mb-3 px-3"> 
-                      <button type="submit" class="btn btn-warning text-center" style="width: 150px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;">Login</button> 
-                      </div>
+                        <button type="submit" class="btn btn-warning text-center" style="width: 150px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;">Login</button> 
+                    </div>
                     <div class="row mb-4 px-3"> 
-                      <small class="font-weight-bold">Doesn’t have an account yet?  <a class="text-warning">Sign up here</a></small> </div>
+                        <small class="font-weight-bold">Doesn’t have an account yet?  <a class="text-warning">Sign up here</a></small> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,18 +59,36 @@
 </template>
 
 <script>
+const API_URL = "http://localhost:3000/auth/login"
+
 export default {
-  name : 'LoginContent',
+  //name : 'LoginContent',
   data() {
     return {
-      register: {
         email: "",
         password: ""
-      }
-    };
+    }
   },
+
   methods: {
-    
+    async loginUser() {
+      const { email, password } = this.$data
+
+      try {
+        const body = {email, password}
+
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(body)
+        })
+
+        const parseRes = await response.json()
+        console.log(parseRes)
+      } catch (err) {
+        console.error(err.message)
+      }
+    }
   }
 }
 </script>
