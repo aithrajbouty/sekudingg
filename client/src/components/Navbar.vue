@@ -1,13 +1,12 @@
 <template>
-
 <div class="nav-container fixed-top">
     <div class="wrapper">
         <nav>
             <div class="logo">
-                sekuuu.ding
+                 sekuuu.ding
             </div>
-            
-            <ul class="nav-items">
+            <div class="contentnav">
+             <ul class="nav-items">
                 <li>
                     <a href="/">Home</a>   
                 </li>
@@ -32,6 +31,8 @@
                         Sign Up / Login</a></button>
                 </li>
             </ul>
+            </div>
+
         </nav>
     </div>
 </div>
@@ -73,6 +74,7 @@ nav .logo {
     font-weight: bold;
     font-size: 35px;
     color: #608EB8;
+    margin-left: -900px;
 }
 .nav-items li{
     list-style: none;

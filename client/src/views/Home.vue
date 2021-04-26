@@ -3,7 +3,7 @@
     <Navbar />
     <div class="container">
       <Hero />
-
+    
     </div>
     <Footer />
   </div>

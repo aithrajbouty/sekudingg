@@ -5,7 +5,7 @@
           <div class="row mt-4">
             <div class="col-md-6">
                 <div class="d-flex h-100">
-                    <div class="justify-content-center align-self-center">
+                    <div class="justify-content-center align-self-left text-left">
                         <h2>Learn to code <strong style="color: #608EB8;">for free</strong>, <br> with <strong style="color: #608EB8;">Sekuuuding!</strong></h2>
                         <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <button class="btn btn-lg btn-warning"><strong>Start Learning Now !</strong></button>
@@ -165,31 +165,12 @@ working through the program, I was offered a job as a front...
       </b-card-text>
     </b-card>
     </div>
-
-      </div>
-  <!-- Mobile -->
-  <div class="d-sm-block d-md-none">
-      <div class="row mt-4">
-          <div class="col-md-6 mb-3">
-          <img src="../assets/images/pict-a.svg" width="100%"/>
-      </div>
-      <div class="col-md-6">
-          <div class="d-flex h-100">
-              <div class="justify-content-center align-self-center">
-                  <h2>Learn to code <strong>for free</strong>, <br> with <strong>Sekuuuding!</strong></h2>
-                  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button class="btn btn-lg btn-warning"><strong>Start Learning Now !</strong></button>
-              </div>
-          </div>
-      </div>
-  </div>
-  </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
@@ -200,12 +181,12 @@ export default {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  margin-top: -20px;
   height: 600px;
   position: absolute;
 }
 .d-none{
   margin-top: 150px;
 }
-
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="module">
     <div class="justify-content-center align-self-center">
         <button class="btn btn-lg btn-warning" color="#FEF9C7"><strong>Web Development</strong></button>
     </div>

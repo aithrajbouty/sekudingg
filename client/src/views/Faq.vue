@@ -6,6 +6,7 @@
       <faq-content/>
 
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -13,12 +14,14 @@
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
 import FaqContent from "@/components/FaqContent.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: 'Home',
   components: {
     Navbar,
-    FaqContent
+    FaqContent,
+    Footer
   }
   }
 </script>
