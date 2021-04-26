@@ -54,64 +54,36 @@ export default {
 </script>
     
 <style>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 .card0 {
     box-shadow: 0px 4px 8px 0px #757575;
     border-radius: 0px
 }
-<<<<<<< HEAD
 .card2 {
     margin: 0px 40px
 }
-=======
-
-.card2 {
-    margin: 0px 40px
-}
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 .image {
     width: 360px;
     height: 280px
 }
-
 .border-line {
     border-right: 1px solid #EEEEEE
 }
-
 .text-sm {
     font-size: 14px !important
 }
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 ::placeholder {
     color: #BDBDBD;
     opacity: 1;
     font-weight: 300
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 :-ms-input-placeholder {
     color: #BDBDBD;
     font-weight: 300
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 ::-ms-input-placeholder {
     color: #BDBDBD;
     font-weight: 300
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 input,
 textarea {
     padding: 10px 12px 10px 12px;
@@ -125,10 +97,6 @@ textarea {
     font-size: 14px;
     letter-spacing: 1px
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 input:focus,
 textarea:focus {
     -moz-box-shadow: none !important;
@@ -136,7 +104,6 @@ textarea:focus {
     box-shadow: none !important;
     border: 1px solid #304FFE;
     outline-width: 0
-<<<<<<< HEAD
 }
 button:focus {
     -moz-box-shadow: none !important;
@@ -144,43 +111,18 @@ button:focus {
     box-shadow: none !important;
     outline-width: 0
 }
-=======
-}
-
-button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline-width: 0
-}
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
 a {
     color: inherit;
     cursor: pointer
 }
-<<<<<<< HEAD
 @media screen and (max-width: 991px) {
-=======
-
-@media screen and (max-width: 991px) {
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
     .image {
         width: 300px;
         height: 220px
     }
-<<<<<<< HEAD
     .border-line {
         border-right: none
     }
-=======
-
-    .border-line {
-        border-right: none
-    }
-
->>>>>>> 7b8c0b7d90ffffcab5406f87c66216593c3f804b
     .card2 {
         border-top: 1px solid #EEEEEE !important;
         margin: 0px 15px
