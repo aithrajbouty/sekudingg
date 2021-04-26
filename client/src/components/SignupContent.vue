@@ -107,9 +107,9 @@ export default {
     async registerUser() {
       const{ full_name, username, email, password } = this.$data
 
-      const body = {full_name, username, email, password}
-
       try {
+        const body = {full_name, username, email, password}
+        
         const response = await fetch(API_URL, {
           method: "POST",
           headers: {"Content-Type": "application/json"},
