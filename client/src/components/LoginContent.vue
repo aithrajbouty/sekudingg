@@ -21,7 +21,7 @@
                             name="email" 
                             placeholder="Email" 
                             style="border-radius: 25px;" 
-                            v-model="email" required
+                            v-model="login.email" required
                         />
                     </div>
                     <div class="row px-3 form-group"> 
@@ -30,7 +30,7 @@
                             name="password" 
                             placeholder="Password" 
                             style="border-radius: 25px;" 
-                            v-model="password" required
+                            v-model="login.password" required
                         /> 
                     </div>
                     <div class="row px-3 mt-3 mb-4">
@@ -49,7 +49,7 @@
                         <button type="submit" class="btn btn-warning text-center" style="width: 150px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;">Login</button> 
                     </div>
                     <div class="row mb-4 px-3"> 
-                        <small class="font-weight-bold">Doesn’t have an account yet?  <a class="text-warning">Sign up here</a></small> 
+                        <small class="font-weight-bold">Doesn’t have an account yet?  <a href="/register" class="text-warning">Sign up here</a></small> 
                     </div>
                 </div>
             </form>
@@ -67,31 +67,32 @@ export default {
   //name : 'LoginContent',
   data() {
     return {
+      login: {
         email: "",
         password: ""
+      }
     }
   },
 
-  methods: {
-    async loginUser() {
-      const { email, password } = this.$data
+    methods: {
+        loginUser(e){
+            e.preventDefault()
+            if (this.login.password.length > 0) {
+                this.$http.post(API_URL, this.login)
+                .then(response => {
+                    localStorage.setItem('token',response.data.token)
 
-      try {
-        const body = {email, password}
-
-        const response = await fetch(API_URL, {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify(body)
-        })
-
-        const parseRes = await response.json()
-        console.log(parseRes)
-      } catch (err) {
-        console.error(err.message)
-      }
+                    if (localStorage.getItem('token') != null){
+                        this.$emit('loggedIn')
+                        this.$router.push('modulsaya')
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error.response);
+                })
+            }
+        }
     }
-  }
 }
 </script>
     

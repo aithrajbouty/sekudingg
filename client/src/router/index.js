@@ -51,7 +51,8 @@ const routes = [
   {
     path: '/register',
     name: 'Register',
-    component: Register
+    component: Register,
+    meta: {guest: true}
   },
   {
     path: '/about',
@@ -64,7 +65,8 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {guest: true}
   }
 ]
 
@@ -72,6 +74,18 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(record => record.meta.guest)){
+    if(localStorage.getItem("token") == null){
+      next()
+    } else{
+      next({ name: "Modulsaya" })
+    }
+  }else{
+    next()
+  }
 })
 
 export default router

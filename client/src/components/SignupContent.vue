@@ -28,7 +28,7 @@
                 id="full_name"
                 class="form-control"
                 placeholder="Full Name"
-                v-model="full_name" required
+                v-model="register.full_name" required
               />
             </div>
 
@@ -40,7 +40,7 @@
                 id="username"
                 class="form-control"
                 placeholder="Username"
-                v-model="username" required
+                v-model="register.username" required
               />
             </div>
 
@@ -52,7 +52,7 @@
                 id="email"
                 class="form-control"
                 placeholder="Email"
-                v-model="email" required
+                v-model="register.email" required
               />
             </div>
 
@@ -64,7 +64,7 @@
                 id="password"
                 class="form-control"
                 placeholder="Password"
-                v-model="password" required
+                v-model="register.password" required
               />
             </div>
 
@@ -74,7 +74,7 @@
 
           <br />
           <p class="login-card-footer-text">
-            Already have an account? <a href="#!" class="text-reset">Login</a>
+            Already have an account? <a href="/login" class="text-reset">Login</a>
           </p>
         </div>
       </div>
@@ -92,38 +92,60 @@
 
 <script>
 const API_URL = "http://localhost:3000/auth/register"
-// import swal from "sweetalert";
+
 export default {
   data() {
     return {
+      register: {
         full_name: "",
         username: "",
         email: "",
         password: ""
+      }
     }
   },
 
   methods: {
-    async registerUser() {
-      const{ full_name, username, email, password } = this.$data
+    // async registerUser(e) {
+    //   e.preventDefault()
 
-      try {
-        const body = {full_name, username, email, password}
-        
-        const response = await fetch(API_URL, {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify(body)
+    //   try {
+    //     const response = await fetch(API_URL, {
+    //       method: "POST",
+    //       headers: {"Content-Type": "application/json"},
+    //       body: JSON.stringify(this.register)
+    //     })
+
+    //     const parseRes = await response.json()
+    //     console.log(parseRes)
+    //     localStorage.setItem("token", parseRes.token)
+
+    //     if(localStorage.getItem("token") !== null){
+    //       this.$emit("loggedin")
+    //       this.$router.push("/modulsaya")
+    //     }
+
+    //   } catch (err) {
+    //     console.error(err.message)  
+    //   }
+    // }
+    registerUser(e) {
+      e.preventDefault()
+      if (this.register.password.length > 0){
+        this.$http.post(API_URL, this.register)
+        .then(response => {
+          localStorage.setItem('token',response.data.token)
+
+          if (localStorage.getItem('token') != null){
+            this.$emit('loggedIn')
+            this.$router.push('/modulsaya')    
+          }
         })
-
-        const parseRes = await response.json()
-
-        console.log(parseRes)
-
-      } catch (err) {
-        console.error(err.message)  
-      }
-    }
+        .catch(error => {
+            console.error(error)
+        })
+      } 
+    }    
   }
-};
+}
 </script>
