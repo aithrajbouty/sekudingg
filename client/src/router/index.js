@@ -8,6 +8,7 @@ import Aboutus from '../views/Aboutus.vue'
 import Faq from '../views/Faq.vue'
 import Profile from '../views/Profile.vue'
 import Register from '../views/Register.vue'
+import Admin from '../views/Admin.vue'
 import Login from '../views/Login.vue'
 import Kelas from '../views/Kelas.vue'
 import KelasView from '../views/KelasView.vue'
@@ -45,6 +46,11 @@ const routes = [
     path: '/faq',
     name: 'Faq',
     component: Faq
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: Admin
   },
   {
     path: '/profile',
