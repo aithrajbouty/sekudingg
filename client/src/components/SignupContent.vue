@@ -13,7 +13,7 @@
       </div>
 
         <div
-          class="card-body"
+          class="cardbody"
           style="background-color: #ffe072; border-radius: 45px"
         >
           <h2 class="login-card-title" style="text">Signup</h2>
@@ -90,8 +90,10 @@
   text-align: left;
   font-size: 12px;
 }
-.card-body{
-  height: 570px;
+.cardbody{
+  height: 550px;
+  width: 400px;
+  padding: 50px;
 }
 </style>
 
