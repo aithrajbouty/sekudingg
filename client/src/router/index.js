@@ -13,6 +13,7 @@ import Login from '../views/Login.vue'
 import Kelas from '../views/Kelas.vue'
 import KelasView from '../views/KelasView.vue'
 import KelasViewLock from '../views/KelasViewLock.vue'
+import Congrats from '../views/Congrats.vue'
 
 Vue.use(VueRouter)
 
@@ -77,6 +78,11 @@ const routes = [
     path: '/kelasviewlock',
     name: 'KelasViewLock',
     component: KelasViewLock
+  },
+  {
+    path: '/congrats',
+    name: 'Congrats',
+    component: Congrats
   },
   {
     path: '/about',

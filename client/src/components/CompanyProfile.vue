@@ -1,5 +1,5 @@
 <template>
-  <div class="companyprofile">
+  <div class="companyprofile" style="margin-top:30px;">
       <div class="card">
           <div class="card-body" style="background-color: #FEF9C7;">
             <h2 class="card-title"><strong>About Sekuuu.ding</strong></h2>

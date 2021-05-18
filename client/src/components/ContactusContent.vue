@@ -1,5 +1,5 @@
 <template>
-    <div class="containerc">
+    <div class="containerc" style="margin-top:30px;">
         <h2 style="text-align:center"><strong>Contact Us</strong></h2>
         <p>For submissions of cooperation or questions about our application or program, please contact :</p>
             <div id="about" class="p-3 p-md-5">

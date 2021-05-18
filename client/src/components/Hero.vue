@@ -18,11 +18,11 @@
         </div>
         <div class="row-mt-4">
            <div class="text-center">
-            <h2 class="text-center"><strong>How it works ?</strong></h2>
+            <h2 class="text-center" style="margin-bottom:50px;"><strong>How it works ?</strong></h2>
             <p>This is the website we wish we had when we were learning on our own. We scour the internet looking for only the best resources to supplement your learning and present them in a logical order.</p>
           </div>
           <div id="about" class="p-3 p-md-3">
-            <div class="row" style="margin-top:-50px;">
+            <div class="row">
               <div class="col-lg">
                 <!-- Icon made by Freepik perfect from www.flaticon.com -->
                 <img src="../assets/images/learn.png" height="120" class="m-4">
