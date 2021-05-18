@@ -12,7 +12,6 @@
         </div>
       </div>
 
-      <div class="col-md-4 mt-4">
         <div
           class="card-body"
           style="background-color: #ffe072; border-radius: 45px"
@@ -74,19 +73,25 @@
 
           <br />
           <p class="login-card-footer-text">
-            Already have an account? <a href="#!" class="text-reset">Login</a>
+            Already have an account? <a href="/login" class="text-reset">Login</a>
           </p>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <style>
-.hero {
+.signupc {
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 12px;
   color: #2c3e50;
+}
+.form-group{
+  text-align: left;
+  font-size: 12px;
+}
+.card-body{
+  height: 570px;
 }
 </style>
 

@@ -9,6 +9,9 @@ import Faq from '../views/Faq.vue'
 import Profile from '../views/Profile.vue'
 import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
+import Kelas from '../views/Kelas.vue'
+import KelasView from '../views/KelasView.vue'
+import KelasViewLock from '../views/KelasViewLock.vue'
 
 Vue.use(VueRouter)
 
@@ -52,6 +55,21 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: Register
+  },
+  {
+    path: '/kelas',
+    name: 'Kelas',
+    component: Kelas
+  },
+  {
+    path: '/kelasview',
+    name: 'KelasView',
+    component: KelasView
+  },
+  {
+    path: '/kelasviewlock',
+    name: 'KelasViewLock',
+    component: KelasViewLock
   },
   {
     path: '/about',
