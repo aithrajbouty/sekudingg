@@ -1,6 +1,6 @@
 <template>
   <div class="kelasview">
-    <Navbar />
+    <NavbarUdahLogin />
     <div class="container">
       <kelas-view-content />
     </div>
@@ -9,13 +9,13 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from "@/components/Navbar.vue";
+import NavbarUdahLogin from "@/components/NavbarUdahLogin.vue";
 import KelasViewContent from '@/components/KelasViewContent.vue';
 
 export default {
   name: 'KelasView',
   components: {
-    Navbar,
+    NavbarUdahLogin,
     KelasViewContent
 
   }

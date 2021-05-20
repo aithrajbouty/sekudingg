@@ -19,7 +19,6 @@
               <div class="card-body">
                 <h5 class="card-title" :numberOfUsers="numberOfUsers" @countUsers="countUsers()"></h5>
                 <p class="card-text">Learners</p>
-                
               </div>
             </div>
           </div>
@@ -28,7 +27,6 @@
               <div class="card-body">
                 <h5 class="card-title"><strong>4</strong></h5>
                 <p class="card-text">Teams</p>
-                
               </div>
             </div>
           </div>
@@ -48,7 +46,7 @@
         </div>
         <div class="isibeliefs">
           <div class="mt-4">
-            <b-card img-src="https://pbs.twimg.com/media/EyNWq6YUYAYcpUd?format=png&name=360x360" img-alt="Card image" img-left class="mb-4">
+            <b-card img-src="https://pbs.twimg.com/media/EyNWq6YUYAYcpUd?format=png&name=360x360" img-alt="Card image" img-left class="mb-4" style="padding:10px;">
               <b-card-text>
                 <strong>Education should be free and accessible</strong><br>
                 This curriculum itself is free and we tried to link to resources that are themselves free so anyone in the world can use them.
@@ -56,7 +54,7 @@
             </b-card>
         </div>
         <div class="mt-4">
-            <b-card img-src="https://pbs.twimg.com/media/EyNW7xOUcAIDHLl?format=png&name=360x360" img-alt="Card image" img-left class="mb-4">
+            <b-card img-src="https://pbs.twimg.com/media/EyNW7xOUcAIDHLl?format=png&name=360x360" img-alt="Card image" img-left class="mb-4" style="padding:10px;">
               <b-card-text>
                 <strong>Education should be free and accessible</strong><br>
                 Our curriculum is full of video projects that will help you build a strong portfolio of work on Github to fill out your resume.
@@ -64,7 +62,7 @@
             </b-card>
         </div>
         <div class="mt-4">
-            <b-card img-src="https://pbs.twimg.com/media/EyNXvkNVgAYHTPJ?format=png&name=360x360" img-alt="Card image" img-left class="mb-4">
+            <b-card img-src="https://pbs.twimg.com/media/EyNXvkNVgAYHTPJ?format=png&name=360x360" img-alt="Card image" img-left class="mb-4" style="padding:10px;">
               <b-card-text>
                 <strong>Education should be free and accessible</strong><br>
                 We're committed to connecting students together so they can stay motivated and learn faster.

@@ -16,7 +16,7 @@
           class="cardbody"
           style="background-color: #ffe072; border-radius: 45px"
         >
-          <h2 class="login-card-title" style="text">Signup</h2>
+          <h2 class="login-card-title" style="text"><strong>Signup</strong></h2>
           <br />
           <form @submit.prevent="registerUser">
             <div class="form-group">

@@ -1,4 +1,3 @@
-<!---->Navbar Belom Login
 <template>
 <div class="nav-container fixed-top">
     <div class="wrapper">
@@ -29,7 +28,7 @@
                 <li style="color: #9FEDD7; margin-top: -40px;">
                     <button class="btn btn-info">
                         <a href="/login" style="font-size: 15px; color: #9FEDD7;">
-                        Sign Up / Login</a></button>
+                        Log Out</a></button>
                 </li>
             </ul>
             </div>
@@ -41,7 +40,7 @@
 
 <script>
 export default {
-    name : 'Navbar'
+    name : 'NavbarUdahLogin'
 }
 </script>
 
