@@ -38,6 +38,7 @@
   }
 
   .sidenav {
+    padding-left: 30px;
     height: 100%;
     width: 260px;
     position: fixed;

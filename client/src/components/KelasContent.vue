@@ -1,6 +1,6 @@
 <template>
   <div class="kelas">
-    <div class="justify-content-center align-self-center">
+    <div class="justify-content-center text-center" style="margin-top:30px;">
         <button class="btn btn-lg btn-warning" color="#FEF9C7"><strong>HTML and CSS</strong></button>
     </div>
 
