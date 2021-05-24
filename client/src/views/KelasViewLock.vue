@@ -1,25 +1,25 @@
 <template>
-  <div class="home">
+  <div class="kelasviewlock">
     <Navbar />
     <div class="container">
-      <Hero />
+      <kelas-view-lock-content />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
-import Hero from "@/components/Hero.vue";
-import Footer from "@/components/Footer.vue";
+import KelasViewLockContent from "@/components/KelasViewLockContent.vue";
 
 export default {
-  name: 'Home',
+  name: 'KelasViewLock',
   components: {
     Navbar,
-    Hero,
-    Footer
+    KelasViewLockContent
+
   }
   }
 </script>
+
+    KelasViewLockContent

@@ -1,26 +1,25 @@
 <template>
   <div class="logincontent">
-    <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-    <div class="card card0 border-0">
-        <div class="row d-flex">
+        <div class="row">
             <div class="col-lg-6">
                 <div class="card1 pb-5">
-                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="../assets/images/webdevcoba.png" class="image"> </div>
+                    <div class="row justify-content-center border-line" style="margin-top:80px;"> 
+                        <img src="../assets/images/myloginnew.svg" class="image" width="100%"> </div>
                 </div>
             </div>
             <div class="col-lg-6">
             <form @submit.prevent="loginUser">
-                <div class="card2 card border-0 px-4 py-5">
-                    <div class="text-center">
-                        <h3>Login</h3> 
+                <div class="card2 card border-0 px-4 py-5" style="background: rgba(159, 237, 215, 0.75);"> 
+                    <div class="text-center" style="margin-bottom:40px">
+                        <h1><strong>Login</strong></h1> 
                     </div>
                     <div class="row px-3 form-group"> 
-                        <input 
+                        <input
                             class="mb-4" 
                             type="text" 
                             name="email" 
                             placeholder="Email" 
-                            style="border-radius: 25px;" 
+                            style="border-radius: 25px;font-size: 17px; line-height: 15px;" 
                             v-model="login.email" required
                         />
                     </div>
@@ -29,11 +28,11 @@
                             type="password" 
                             name="password" 
                             placeholder="Password" 
-                            style="border-radius: 25px;" 
+                            style="border-radius: 25px;font-size: 17px; line-height: 15px;" 
                             v-model="login.password" required
                         /> 
                     </div>
-                    <div class="row px-3 mt-3 mb-4">
+                    <div class="row px-3 mt-3 mb-4 ml-1">
                         <div class="custom-control custom-checkbox custom-control-inline"> 
                             <input 
                                 id="chk1" 
@@ -41,22 +40,22 @@
                                 name="chk" 
                                 class="custom-control-input"
                             /> 
-                            <label for="chk1" class="custom-control-label text-sm">Show Password</label> 
+                            <label for="chk1" class="custom-control-label text-sm"><strong>Show Password</strong></label> 
                         </div> 
-                        <a href="#" class="ml-auto mb-0 text-warning">Forgot Password?</a>
+                        <a href="#" style="text-decoration: none;" class="ml-auto mb-0 text-warning"><strong>Forgot Password?</strong></a>
                     </div>
                     <div class="row mb-3 px-3"> 
                         <button type="submit" class="btn btn-warning text-center" style="width: 150px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;">Login</button> 
                     </div>
                     <div class="row mb-4 px-3"> 
-                        <small class="font-weight-bold">Doesn’t have an account yet?  <a href="/register" class="text-warning">Sign up here</a></small> 
+                        <small class="font-weight-bold">Doesn’t have an account yet?  
+                            <a href="/register" style="text-decoration: none;" class="text-warning">Sign up here</a></small> 
                     </div>
                 </div>
             </form>
             </div>
         </div>
-    </div>
-</div>
+
   </div>
 </template>
 
@@ -97,16 +96,8 @@ export default {
 </script>
     
 <style>
-.card0 {
-    box-shadow: 0px 4px 8px 0px #757575;
-    border-radius: 0px
-}
 .card2 {
-    margin: 0px 40px
-}
-.image {
-    width: 360px;
-    height: 280px
+    margin: 0px 40px;
 }
 .border-line {
     border-right: 1px solid #EEEEEE
@@ -158,10 +149,10 @@ a {
     color: inherit;
     cursor: pointer
 }
-@media screen and (max-width: 991px) {
-    .image {
-        width: 300px;
-        height: 220px
+@media screen and (max-width: 1440px) {
+    .image{
+        width: 541px;
+        height: 422px;
     }
     .border-line {
         border-right: none

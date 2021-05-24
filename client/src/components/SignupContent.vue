@@ -12,12 +12,11 @@
         </div>
       </div>
 
-      <div class="col-md-4 mt-4">
         <div
-          class="card-body"
+          class="cardbody"
           style="background-color: #ffe072; border-radius: 45px"
         >
-          <h2 class="login-card-title" style="text">Signup</h2>
+          <h2 class="login-card-title" style="text"><strong>Signup</strong></h2>
           <br />
           <form @submit.prevent="registerUser">
             <div class="form-group">
@@ -78,15 +77,23 @@
           </p>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <style>
-.hero {
+.signupc {
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 12px;
   color: #2c3e50;
+}
+.form-group{
+  text-align: left;
+  font-size: 12px;
+}
+.cardbody{
+  height: 550px;
+  width: 400px;
+  padding: 50px;
 }
 </style>
 

@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <div class="kelas">
     <Navbar />
     <div class="container">
-      <Hero />
+      <kelas-content />
     </div>
     <Footer />
   </div>
@@ -11,15 +11,16 @@
 <script>
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
-import Hero from "@/components/Hero.vue";
-import Footer from "@/components/Footer.vue";
+import KelasContent from '@/components/KelasContent.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-  name: 'Home',
+  name: 'Kelas',
   components: {
     Navbar,
-    Hero,
+    KelasContent,
     Footer
+
   }
   }
 </script>
