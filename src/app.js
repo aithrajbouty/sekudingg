@@ -14,11 +14,13 @@ app.use(express.json()) //req.body
 const authRoute = require("./routes/auth_route")
 const moduleRoute = require("./routes/module_route")
 const homeRoute = require("./routes/home_route")
+const materialRoute = require("./routes/materials_route")
 // const aboutUsRoute = require("./routes/aboutUs_route")
 
 app.use("/auth", authRoute)
 app.use("/module", moduleRoute)
 app.use("/home", homeRoute)
+app.use("/material", materialRoute)
 // app.use("/aboutUs", aboutUsRoute)
 
 //LISTEN

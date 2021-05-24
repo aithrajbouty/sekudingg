@@ -43,11 +43,10 @@ exports.selectSpecificModule = async (req, res) => {
 
 exports.updateModule = async (req, res) => {
     try{
-        const { id } = req.params
+        const { id } = req.params;
         const { name } = req.body;
         const { description } = req.body;
         const { category } = req.body;
-        const { publish_date } = req.body;
         const { author } = req.body;
         const { difficulty } = req.body;
         const { price } = req.body;
