@@ -1,51 +1,32 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFA;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-    <div class="nav-container fixed-top">
-          <div class="container">
-    <a class="navbar-brand" href="#"
-        style="font-family: Montserrat;
+<div>
+  <b-navbar toggleable="lg" fixed="top" style="background-color: #FFFFFA; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+    <b-navbar-brand href="/" style="    font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 33px;
-    color: #608EB8;">sekuuu.ding
-        </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/module">Module</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contactus">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/aboutus">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/faq">FAQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">Profile</a>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-info">
+    color: #608EB8;
+    margin-left: 120px;">sekuuu.ding</b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav style="margin-left:auto;">
+        <b-nav-item href="/">Home</b-nav-item>
+        <b-nav-item href="/module">Module</b-nav-item>
+        <b-nav-item href="/contactus">Contact Us</b-nav-item>
+        <b-nav-item href="/aboutus">About Us</b-nav-item>
+        <b-nav-item href="/faq">FAQ</b-nav-item>
+        <b-nav-item href="/profile">Profile</b-nav-item>
+        <button class="btn btn-info">
             <a href="/login" style="font-size: 15px; color: #9FEDD7; text-decoration:none;">
-                Log Out</a></button>
-        </li>
-      </ul>
-    </div>
-  </div>
-    </div>
-
-</nav>
+                Log out</a></button>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
 </template>
-
-<script>
+<script >
 export default {
     name : 'NavbarUdahLogin'
 }

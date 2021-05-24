@@ -1,6 +1,6 @@
 <template>
   <div class="accordion" role="tablist" style="margin-top:30px;">
-    <h2><strong>Frequently Asked Question</strong></h2>
+    <h2 style="text-align:center;"><strong>Frequently Asked Question</strong></h2>
     <br>
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">

@@ -1,7 +1,7 @@
 <template>
 
 <div class="body">
-  <div class="sidenav">
+  <div class="sidenav text-center">
     <h4 style="font-weight: bold;">Data Mentor</h4>
     <img src = "../assets/images/aithrapic.jpg" width="100px" style="border-radius: 50px;">
     <br><br>
@@ -38,7 +38,6 @@
   }
 
   .sidenav {
-    padding-left: 30px;
     height: 100%;
     width: 260px;
     position: fixed;
