@@ -5,18 +5,28 @@
             <span class="mask bg-gradient-success opacity-8"></span>
             <div class="d-flex align-items-center container-fluid">
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-md-10 col-lg-7">
                 <h1 class="display-2 text-white">Hello {{user.username}}</h1>
+||||||| 4015d1c
+                <div class="col-md-10 col-lg-7">
+                <h1 class="display-2 text-white">Hello Jesse</h1>
+=======
+                <div class="col">
+                <h1 class="display-2 text-white">Hello Jessica</h1>
+>>>>>>> f30c9507a0615a36afabc68bdcbeb4c1b36c1c0a
                 <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-                <a href="#!" class="btn btn-info">Edit profile</a>
-                </div></div></div></div></div>
-                            
-                <div class="container">
+                <div>
+                <!-- Using modifiers -->
+                <b-button v-b-toggle.collapse-2 class="m-1 btn btn-info">Edit Profile</b-button>
+
+                <!-- Element to collapse -->
+                <b-collapse id="collapse-2">
                 <div class="row">
                    <div class="order-xl-2 mb-5 col-xl-4">
                         <div alt="Image placeholder" class="card card-profile">
                             <div class="row justify-content-center">
-                                <div class="card-profile-image">
+                                <div class="card-profile-image text-center">
                                  <a href="#">
                                      <img src="../assets/images/aithrapic.jpg" width="50%" class="rounded-circle"></a>
                                     </div>
@@ -37,15 +47,14 @@
         <i class="ni education_hat mr-2"></i>University of Computer Science
       </div>
       <hr class="my-4">
-      <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p><a href="#">Show more</a></div></div><!----><!----></div></div><div class="order-xl-1 col-xl-8">
+      <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>>
+      </div></div></div></div>
+      <div class="order-xl-1 col-xl-8">
           <div class="card">
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col-8"><h3 class="mb-0">Edit profile </h3>
-                </div>
-                <div class="text-right col-4">
-                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-                  </div></div></div>
+                </div></div></div>
                   <div class="card-body">
                     <form class="">
                       <h6 class="heading-small text-muted mb-4">User information</h6>
@@ -97,9 +106,14 @@
                                                   <textarea id="about-form-textaria" placeholder="A few words about you ..." rows="4" wrap="soft" class="form-control"></textarea>
                                                   </div></div></div></form></div></div></div></div>
                                                   <div class="col-sm-10 mt-4 text-right" style="margin-bottom:20px;">
-                                                    <button class="btn btn-warning" onclick="location.href=">Update Profile</button>
+                                                    <button class="btn btn-warning" onclick="location.href=" style="padding:20px; font-weight:bold; font-size:18px;">Update Profile</button>
                                                     </div>
-                                                  </div>
+                                                
+                </b-collapse>
+              </div>
+                </div></div></div></div></div>
+                            
+
                                                   </div>
                 
 </template>

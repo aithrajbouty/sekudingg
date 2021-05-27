@@ -1,14 +1,14 @@
 <template>
 
 <div class="body">
-  <div class="sidenav">
+  <div class="sidenav text-center">
     <a class="active" href="#materi1">Materi 1</a>
     <a href="#materi2">Materi 2</a>
     <a href="#materi3">Materi 3</a>
     <a href="#materi4">Materi 4</a>
   </div>
 
-  <div class="content">
+  <div class="content text-center">
     <h2 style="font-weight: bold;">What is HTML?</h2>
     <br><br><br>
     <img src = "../assets/images/image 4.png" width="100px" style="border-radius: 50px;">
