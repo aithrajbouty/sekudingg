@@ -6,7 +6,7 @@
             <div class="d-flex align-items-center container-fluid">
             <div class="row">
                 <div class="col-md-10 col-lg-7">
-                <h1 class="display-2 text-white">Hello Jesse</h1>
+                <h1 class="display-2 text-white">Hello {{user.username}}</h1>
                 <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
                 <a href="#!" class="btn btn-info">Edit profile</a>
                 </div></div></div></div></div>
@@ -26,10 +26,10 @@
                                     <div class="col">
                                    </div></div>
     <div class="text-center"><h5 class="h3">
-        Jessica Jones
+        {{user.full_name}}
         <span class="font-weight-light">, 27</span>
         </h5><div class="h5 font-weight-300">
-          <i class="ni location_pin mr-2"></i>Bucharest, Romania
+          <i class="ni location_pin mr-2"></i>{{user.email}}
       </div>
       <div class="h5 mt-4">
         <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
@@ -105,8 +105,26 @@
 </template>
 
 <script>
+const API_URL = "http://localhost:3000/home/"
+// import swal from "sweetalert";
 export default {
+  data: () => ({
+    error: "",
+    user: []
+  }),
 
+  mounted(){
+    const headers = { token: localStorage.token };
+    fetch(API_URL, { headers })
+    .then(response => response.json())
+    .then(result => {
+      this.user = result;
+      var parsedobj = JSON.parse(JSON.stringify(result))
+      console.log(parsedobj)
+    });
+  },
+
+  methods: {}
 }
 </script>
 

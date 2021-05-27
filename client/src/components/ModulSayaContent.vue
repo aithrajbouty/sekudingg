@@ -3,7 +3,6 @@
       <div class="justify-content-center align-self-center">
           <button class="btn btn-lg btn-warning" color="#FEF9C7"><strong>Web Development</strong></button>
           <button class="btn btn-lg btn-warning" color="#E02780" @click=logUserOut><strong>LOGOUT</strong></button>
-          <p color="#E02780">{{username}}</p>
       </div>
 
       <div class="row mb-3">
@@ -103,39 +102,9 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:3000/home/"
 // import swal from "sweetalert";
 export default {
-  data() {
-    return {
-      username: "",
-      message: "TESTESTES"
-    }
-  },
-
   methods: {
-    // async getUsername() {
-    //   try {
-    //     const response = await fetch(API_URL, {
-    //       method: "GET",
-    //       headers: { token: localStorage.token }
-    //     })
-
-    //     const parseRes = await response.json()
-    //     console.log(parseRes)
-    //     //this.$data = parseRes.username
-    //   } catch (err) {
-    //     console.error(err.message)  
-    //   }
-    // },
-
-    getUsername(){
-      this.$http.get(API_URL, this.username)
-      .then(response => {
-        console.log(response)
-      })
-    },
-
     logUserOut(){
       localStorage.removeItem("token")
       this.$router.push("/login")

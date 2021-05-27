@@ -4,7 +4,7 @@ exports.home = async (req, res) => {
     try {
         // res.json(req.user)
 
-        const user = await pool.query("SELECT username FROM users WHERE id = $1", [
+        const user = await pool.query("SELECT * FROM users WHERE id = $1", [
             req.user
         ])
         res.json(user.rows[0])
