@@ -5,16 +5,8 @@
             <span class="mask bg-gradient-success opacity-8"></span>
             <div class="d-flex align-items-center container-fluid">
             <div class="row">
-<<<<<<< HEAD
-                <div class="col-md-10 col-lg-7">
-                <h1 class="display-2 text-white">Hello {{user.username}}</h1>
-||||||| 4015d1c
-                <div class="col-md-10 col-lg-7">
-                <h1 class="display-2 text-white">Hello Jesse</h1>
-=======
                 <div class="col">
-                <h1 class="display-2 text-white">Hello Jessica</h1>
->>>>>>> f30c9507a0615a36afabc68bdcbeb4c1b36c1c0a
+                <h1 class="display-2 text-white">Hello {{user.username}}</h1>
                 <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
                 <div>
                 <!-- Using modifiers -->
