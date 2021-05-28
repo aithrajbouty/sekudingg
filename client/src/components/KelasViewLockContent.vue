@@ -1,11 +1,11 @@
 <template>
 
 <div class="body">
-  <div class="sidenav text-center" v-for="classes in materials" :key="classes._id">
-    <!-- <a class="active" href="#materi1">Materi 1</a> -->
-    <a href="#materi2">{{classes.name}}</a>
-    <!-- <a href="#materi3">Materi 3</a>
-    <a href="#materi4">Materi 4</a> -->
+  <div class="sidenav text-center">
+    <a class="active" href="#materi1">Materi 1</a>
+    <a href="#materi2">Materi 2</a>
+    <a href="#materi3">Materi 3</a>
+    <a href="#materi4">Materi 4</a>
   </div>
 
   <div class="content text-center">
@@ -25,7 +25,6 @@
   body {
     font-family: "Lato", sans-serif;
   }
-
   .sidenav {
     height: 100%;
     width: 260px;
@@ -37,7 +36,6 @@
     overflow-x: hidden;
     padding-top: 100px;
   }
-
   .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -45,17 +43,14 @@
     color: black;
     display: block;
   }
-
   .sidenav a:hover {
     color: #608EB8;
   }
-
   .content {
     margin-left: 260px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
-
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -72,16 +67,15 @@
   //   }
   // }
 
-const moduleid = "2"
-const MODULE_API_URL = "http://localhost:3000/module/" + moduleid + "/material"
-
 export default{
   data: () => ({
     error: "",
     materials: []
   }),
-
   mounted(){
+    const moduleid = this.$route.params.moduleid
+    const MODULE_API_URL = "http://localhost:3000/module/" + moduleid + "/material"
+
     fetch(MODULE_API_URL)
       .then(response => response.json())
       .then(result => {

@@ -1,17 +1,17 @@
 <template>
 
 <div class="body">
-  <div class="sidenav text-center">
+  <div class="sidenav text-center" v-for="classes in materials" :key="classes._id">
     <h4 style="font-weight: bold;">Data Mentor</h4>
     <img src = "../assets/images/aithrapic.jpg" width="100px" style="border-radius: 50px;">
     <br><br>
     <p style="font-weight: bold;">Aithra Junia Bouty</p>
     <p>Front End Developer at Tokopaedi</p>
     
-    <a class="active" href="#materi1">Materi 1</a>
-    <a href="#materi2">Materi 2</a>
-    <a href="#materi3">Materi 3</a>
-    <a href="#materi4">Materi 4</a>
+    <!-- <a class="active" href="#materi1">Materi 1</a> -->
+    <a href="#materi2">{{classes.name}}</a>
+    <!-- <a href="#materi3">Materi 3</a>
+    <a href="#materi4">Materi 4</a> -->
   </div>
 
   <div class="content">
@@ -78,8 +78,23 @@
     data() {
       return {
         value: 33.333333333,
-        max: 100
+        max: 100,
+        materials: []
       }
-    }
+    },
+
+    mounted(){
+    const moduleid = this.$route.params.moduleid
+    const MODULE_API_URL = "http://localhost:3000/module/" + moduleid + "/material"
+
+    fetch(MODULE_API_URL)
+      .then(response => response.json())
+      .then(result => {
+        this.materials = result;
+      });
+      
+      console.log(this.$route.params.moduleid)
+  },
+  methods: {}
   }
 </script>

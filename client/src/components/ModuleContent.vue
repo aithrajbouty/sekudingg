@@ -5,9 +5,10 @@
     </div>
 
     <div class="row mb-3">
-      <div class="col-md-4 mt-4" v-for="modules in courses" :key="modules._id">
+      <div class="col-md-4 mt-4" v-for="modules in courses" :key="modules.id">
         <div>
-          <a href="/kelasview">
+          <router-link :to="{ name: 'KelasView', params: { moduleid: modules.id }}">
+          <!-- <a href="/kelasview"> -->
             <b-card
               img-v-if="modules.image" :img-src="modules.image" :img-alt="modules.name"
               img-top
@@ -18,7 +19,8 @@
             <p align="Justify">{{modules.description}}</p>
             <p align="Right">{{modules.price}}</p>
             </b-card>
-          </a>
+          <!-- </a> -->
+          </router-link>
         </div>
       </div>
     </div>

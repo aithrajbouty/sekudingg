@@ -70,13 +70,13 @@ const routes = [
     component: Kelas
   },
   {
-    path: '/kelasview',
+    path: '/kelasview/:moduleid',
     name: 'KelasView',
     component: KelasView,
     meta: {requiresAuth: true}
   },
   {
-    path: '/kelasviewlock',
+    path: '/kelasviewlock/',
     name: 'KelasViewLock',
     component: KelasViewLock
   },
@@ -111,10 +111,10 @@ router.beforeEach((to, from, next) => {
   if(to.matched.some(record => record.meta.requiresAuth)){
     if(localStorage.getItem("token") == null){
       next({
-        path: "/kelasviewlock",
+        name: "KelasViewLock",
         params: { nextUrl: to.fullPath }
       })
-    }
+    } else next()
   }
   else if(to.matched.some(record => record.meta.guest)){
     if(localStorage.getItem("token") == null){
