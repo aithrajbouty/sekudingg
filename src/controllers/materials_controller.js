@@ -6,9 +6,10 @@ exports.addMaterial = async (req, res) => {
         const { name } = req.body;
         const { description } = req.body;
         const { duration_time } = req.body;
+        const { courses_id } = req.body;
         const newMaterial = await pool.query(
-            "INSERT INTO materials (video_path, name, description, duration_time) VALUES ($1, $2, $3, $4) RETURNING *", 
-        [video_path, name, description, duration_time])
+            "INSERT INTO materials (video_path, name, description, duration_time, courses_id) VALUES ($1, $2, $3, $4, $5) RETURNING *", 
+        [video_path, name, description, duration_time, courses_id])
 
         res.json(newMaterial)
     }catch(err){

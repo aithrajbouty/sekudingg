@@ -72,7 +72,8 @@ const routes = [
   {
     path: '/kelasview',
     name: 'KelasView',
-    component: KelasView
+    component: KelasView,
+    meta: {requiresAuth: true}
   },
   {
     path: '/kelasviewlock',
@@ -107,7 +108,15 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.guest)){
+  if(to.matched.some(record => record.meta.requiresAuth)){
+    if(localStorage.getItem("token") == null){
+      next({
+        path: "/kelasviewlock",
+        params: { nextUrl: to.fullPath }
+      })
+    }
+  }
+  else if(to.matched.some(record => record.meta.guest)){
     if(localStorage.getItem("token") == null){
       next()
     } else{

@@ -7,5 +7,6 @@ router.get("/", controller.selectAllModules)
 router.get("/:id", controller.selectSpecificModule)
 router.put("/:id", controller.updateModule)
 router.delete("/:id", controller.deleteModule)
+router.get("/:id/material", controller.selectMaterialsByCourse)
 
 module.exports = router

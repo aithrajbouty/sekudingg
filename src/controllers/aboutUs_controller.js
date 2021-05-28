@@ -1,4 +1,4 @@
-// const AboutUs = require("../models/Users_model")
+const { pool } = require("../dbConfig");
 
 // exports.countUsers = async (req, res) => {
 //     try{
@@ -8,6 +8,16 @@
 //         res.json({message: err })
 //     }
 // }
+
+exports.countUsers = async (req, res) => {
+    try{
+        const users = await pool.query("SELECT COUNT(id) FROM users")
+
+        res.json(users.rows[0])
+    }catch(err){
+        res.json({ message: err })
+    }
+}
 
 // export async function countUsers(){
 //     const response = await fetch("/aboutUs/count")

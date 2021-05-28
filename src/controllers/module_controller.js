@@ -72,3 +72,16 @@ exports.deleteModule = async (req,res) => {
         res.json({ message: err })
     }
 }
+
+exports.selectMaterialsByCourse = async (req, res) => {
+    const { id } = req.params;
+    try{
+        const material = await pool.query(
+            "SELECT materials.*, courses.name AS \"Module\" FROM materials JOIN courses ON materials.courses_id = courses.id WHERE courses.id = $1", 
+            [id])
+
+        res.json(material.rows)
+    }catch(err){
+        res.json({ message: err })
+    }
+}

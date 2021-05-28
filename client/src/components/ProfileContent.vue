@@ -111,8 +111,8 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:3000/home/"
-// import swal from "sweetalert";
+const API_URL = "http://localhost:3000/profile/"
+
 export default {
   data: () => ({
     error: "",

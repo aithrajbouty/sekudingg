@@ -18,8 +18,8 @@
         <b-nav-item href="/aboutus">About Us</b-nav-item>
         <b-nav-item href="/faq">FAQ</b-nav-item>
         <b-nav-item href="/profile">Profile</b-nav-item>
-        <button class="btn btn-info">
-            <a href="/login" style="font-size: 15px; color: #9FEDD7; text-decoration:none;">
+        <button class="btn btn-info" @click=logUserOut>
+            <a style="font-size: 15px; color: #9FEDD7; text-decoration:none;">
                 Log out</a></button>
       </b-navbar-nav>
     </b-collapse>
@@ -28,7 +28,12 @@
 </template>
 <script >
 export default {
-    name : 'NavbarUdahLogin'
+  methods: {
+    logUserOut(){
+      localStorage.removeItem("token")
+      this.$router.push("/login")
+    }
+  }
 }
 </script>
 

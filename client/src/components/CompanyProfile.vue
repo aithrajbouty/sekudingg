@@ -17,7 +17,7 @@
           <div class="col-sm-4">
             <div class="card" style="background-color: #FEF9C7;">
               <div class="card-body">
-                <h5 class="card-title" :numberOfUsers="numberOfUsers" @countUsers="countUsers()"></h5>
+                <h5 class="card-title"><strong>{{totalUsers.count}}</strong></h5>
                 <p class="card-text">Learners</p>
               </div>
             </div>
@@ -122,49 +122,25 @@
 </template>
 
 <script>
-//const API_URL = "http://localhost:3000/aboutUs/count"
-// //const API_URL = "http://localhost:3000/auth"
-// import {countUsers} from "C:/Users/Aithra Junia Bouty/Documents/SEMESTER 6/PPL/SEKUDINGG/src/controllers/aboutUs_controller"
+const API_URL = "http://localhost:3000/aboutUs/count"
 
-// export default{
-//   name: "AboutUs",
-//   data() {
-//     return{
-//       users: [],
-//       numberOfUsers: 0
-//     }
-//   },
+export default{
+  data: () => ({
+    error: "",
+    totalUsers: []
+  }),
 
-//   methods: {
-//     countUsers() {
-//       countUsers().then(response => {
-//         console.log(response)
-//         this.users = response
-//         this.numberOfUsers = this.users.length
-//       })
-//     }
-//     // userCounter(){
-//     //   fetch(API_URL).then(({ data}) => (this.users = data)
-//     //   return users.length;
-//     //   )
-//     // }
-//   },
-
-//   mounted(){
-//     // fetch(API_URL)
-//     //   .then(response => {
-//     //     console.log(response)
-//     //     this.users = response
-//     //     this.numberOfUsers = this.users.length
-//     //   });
-//     this.countUsers();
-//     // fetch(API_URL)
-//     //   .then(response => response.json())
-//     //   .then(result => {
-//     //     this.users = result;
-//     //   });
-//   }
-// };
+  mounted(){
+    fetch(API_URL)
+    .then(response => response.json())
+    .then(result => {
+      this.totalUsers = result;
+      // var parsedobj = JSON.parse(JSON.stringify(result))
+      // console.log(parsedobj)
+    });
+  },
+  methods: {}
+};
 </script>
 
 <style>
