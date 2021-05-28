@@ -1,11 +1,11 @@
 <template>
 
 <div class="body">
-  <div class="sidenav text-center">
-    <a class="active" href="#materi1">Materi 1</a>
-    <a href="#materi2">Materi 2</a>
-    <a href="#materi3">Materi 3</a>
-    <a href="#materi4">Materi 4</a>
+  <div class="sidenav text-center"  v-for="classes in materials" :key="classes._id">
+    <!-- <a class="active" href="#materi1">Materi 1</a> -->
+    <a href="#materi2">{{classes.name}}</a>
+    <!-- <a href="#materi3">Materi 3</a>
+    <a href="#materi4">Materi 4</a> -->
   </div>
 
   <div class="content text-center">
