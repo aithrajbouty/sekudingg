@@ -20,7 +20,9 @@
         <b-nav-item href="/profile">Profile</b-nav-item>
         <button class="btn btn-info" @click=logUserOut>
             <a style="font-size: 15px; color: #9FEDD7; text-decoration:none;">
-                Log out</a></button>
+                Log out
+            </a>
+        </button>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

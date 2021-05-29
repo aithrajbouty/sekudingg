@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <NavbarUdahLogin />
+    <Navbar />
     <ProfileContent />  
     <Footer />          
   </div>
@@ -9,14 +9,14 @@
 
 <script>
 // @ is an alias to /src
-import NavbarUdahLogin from '@/components/NavbarUdahLogin.vue'
+import Navbar from "@/components/Navbar.vue";
 import ProfileContent from '@/components/ProfileContent.vue'
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: 'Profile',
   components: {
-    NavbarUdahLogin,
+    Navbar,
     ProfileContent,
     Footer
   }
