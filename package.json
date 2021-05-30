@@ -1,29 +1,49 @@
 {
-  "name": "sekudingg",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/app.js",
+  "name": "sekuuuding",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "server": "nodemon app.js --ignore 'client/'",
-    "client": "npm run serve --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^6.0.1",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.3",
-    "nodemon": "^2.0.7",
-    "pg": "^8.6.0",
-    "sequelize": "^6.6.2",
-    "sweetalert": "^2.1.2"
-  }
+    "axios": "^0.21.1",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-jwt-decode": "^0.1.0",
+    "vue-router": "^3.2.0",
+    "vue-sweetalert2": "^4.3.1",
+    "vue-toast-notification": "^0.6.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.12",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
