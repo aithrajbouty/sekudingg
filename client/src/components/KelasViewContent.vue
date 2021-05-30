@@ -8,10 +8,11 @@
     <p style="font-weight: bold;">Aithra Junia Bouty</p>
     <p>Front End Developer at Tokopaedi</p>
     
-    <!-- <a class="active" href="#materi1">Materi 1</a> -->
-    <a href="#materi2">{{classes.name}}</a>
-    <!-- <a href="#materi3">Materi 3</a>
-    <a href="#materi4">Materi 4</a> -->
+    <div class="col">
+      <div class="row"  v-for="classes in materials" :key="classes._id">
+        <a href="#materi2">{{classes.name}}</a>
+      </div>
+  </div>
   </div>
 
   <div class="content">

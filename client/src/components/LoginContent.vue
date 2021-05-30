@@ -83,7 +83,7 @@ export default {
 
                     if (localStorage.getItem('token') != null){
                         this.$emit('loggedIn')
-                        this.$router.push('modulsaya')
+                        this.$router.push('module')
                     }
                 })
                 .catch(function (error) {

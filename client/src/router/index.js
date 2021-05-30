@@ -120,7 +120,7 @@ router.beforeEach((to, from, next) => {
     if(localStorage.getItem("token") == null){
       next()
     } else{
-      next({ name: "Modulsaya" })
+      next({ name: "Module" })
     }
   }else{
     next()

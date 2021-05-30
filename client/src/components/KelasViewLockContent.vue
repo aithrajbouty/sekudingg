@@ -1,14 +1,11 @@
 <template>
 <div class="body">
-    <div class="col-md-4 mt-4">
-    <div class="row mb-3">
-  <div class="sidenav text-center"  v-for="classes in materials" :key="classes._id">
-    <!-- <a class="active" href="#materi1">Materi 1</a> -->
-    <a href="#materi2">{{classes.name}}</a>
-    <!-- <a href="#materi3">Materi 3</a>
-    <a href="#materi4">Materi 4</a> -->
-  </div>
-  </div>
+  <div class="sidenav text-center">
+    <div class="col">
+      <div class="row"  v-for="classes in materials" :key="classes._id">
+        <a href="#materi1">{{classes.name}}</a>
+      </div>
+    </div>
   </div>
   <div class="content text-center">
     <h2 style="font-weight: bold; margin-top:30px;">What is HTML?</h2>
@@ -62,15 +59,6 @@
 </style>
 
 <script>
-  // export default {
-  //   data() {
-  //     return {
-  //       value: 33.333333333,
-  //       max: 100
-  //     }
-  //   }
-  // }
-
 export default{
   data: () => ({
     error: "",
