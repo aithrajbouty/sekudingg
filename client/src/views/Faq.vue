@@ -2,6 +2,7 @@
   <div class="home">
     <Navbar />
     <navbar-module />
+          <img src="../assets/images/flowerkiri.svg" width="40%"/>
     <div class="container">
       <faq-content/>
 

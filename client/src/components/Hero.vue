@@ -6,8 +6,8 @@
           <div class="col-md-6">
             <div class="d-flex h-100">
               <div class="justify-content-center align-self-left text-left">
-                <h2>Learn to code <strong style="color: #608EB8;">for free</strong>, <br> with <strong style="color: #608EB8;">Sekuuuding!</strong></h2>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h1>Learn to code <strong style="color: #608EB8;">for free</strong>, <br> with <strong style="color: #608EB8;">Sekuuuding!</strong></h1>
+                <p>Courses designed by experts with real-world practice. Join our global community. The best way to learn to code.</p>
                 <button class="btn btn-lg btn-warning"><strong>Start Learning Now !</strong></button>
               </div>
             </div>
@@ -148,11 +148,10 @@
                   <div class="photo"> 
                     <img src="../assets/images/hanapic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
-
+    margin-right: auto;"> </div><br>
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>Rob Pando</p>
+                      <p><strong>Rob Pando</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -165,11 +164,11 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/aithrapic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>Olivia</p>
+                      <p><strong>Olivia</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -182,11 +181,11 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/aithrapic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>Cody Loyd</p>
+                      <p><strong>Cody Loyd</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -199,11 +198,11 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/kefilpic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>William Kennedy</p>
+                      <p><strong>William Kennedy</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -229,7 +228,7 @@ working through the program, I was offered a job as a front...</p>
           <div class="col-md-6" style="margin-top:-100px;">
             <div class="d-flex h-100">
               <div class="justify-content-center align-self-left text-left">
-                <h2>Learn to code <strong style="color: #608EB8;">for free</strong>, <br> with <strong style="color: #608EB8;">Sekuuuding!</strong></h2>
+                <h1>Learn to code <strong style="color: #608EB8;">for free</strong>, <br> with <strong style="color: #608EB8;">Sekuuuding!</strong></h1>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <button class="btn btn-lg btn-warning"><strong>Start Learning Now !</strong></button>
               </div>
@@ -368,11 +367,11 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/hanapic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>Rob Pando</p>
+                      <p><strong>Rob Pando</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -385,11 +384,11 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/aithrapic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>Olivia</p>
+                      <p><strong>Olivia</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -402,11 +401,11 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/aithrapic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">
-                      <p>Cody Loyd</p>
+                      <p><strong>Cody Loyd</strong></p>
                     </div>
                     <p>Before I started sekuuding I had literally ZERO 
 programming experience. After almost exactly a year of 
@@ -419,7 +418,7 @@ working through the program, I was offered a job as a front...</p>
                   <div class="photo"> 
                     <img src="../assets/images/kefilpic.jpg" width="40%" class="rounded-circle" style="display: block;
     margin-left: auto;
-    margin-right: auto;"> </div>
+    margin-right: auto;"> </div><br>
 
                   <div class="success-content">
                     <div class="details text-center">

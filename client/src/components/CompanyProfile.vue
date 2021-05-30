@@ -1,5 +1,5 @@
 <template>
-  <div class="companyprofile" style="margin-top:30px;">
+  <div class="companyprofile" style="margin-top:150px;">
       <div class="card">
           <div class="card-body" style="background-color: #FEF9C7;">
             <h2 class="card-title"><strong>About Sekuuu.ding</strong></h2>
@@ -75,43 +75,55 @@
         <div class="ourteam">
           <h2 style="text-align:center"><strong>Our Team</strong></h2>
           <div class="row">
-            <div class="column">
+            <div class="col-lg">
               <div class="card">
                 <img src="../assets/images/kefilpic.jpg" alt="Jane" style="width:100%">
                 <div class="container">
                   <br>
-                  <h2>Kefilino Khalifa</h2>
-                  <p class="title">CEO & Founder</p>
+                  <h3>Kefilino K. F</h3>
+                  <p class="title">Project Manager</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>kefilifil@example.com</p>
+                  <p>kefilino@live.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
               </div>
             </div>
 
-            <div class="column">
+            <div class="col-lg">
               <div class="card">
                 <img src="../assets/images/aithrapic.jpg" alt="Mike" style="width:100%">
                 <div class="container">
                   <br>
-                  <h2>Aithra Junia</h2>
-                  <p class="title">Art Director</p>
+                  <h3>Aithra Junia</h3>
+                  <p class="title">Back End Dev.</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>aithraw@example.com</p>
+                  <p>aithrabouty@gmail.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
               </div>
             </div>
-
-            <div class="column">
+            <div class="col-lg">
+              <div class="card">
+                <img src="../assets/images/shenapics.jpg" alt="John" style="width:100%">
+                <div class="container">
+                  <br>
+                  <h3>Sharashena C</h3>
+                  <p class="title">UI/UX & Front End Dev.</p>
+                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>shenaach@gmail.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
               <div class="card">
                 <img src="../assets/images/hanapic.jpg" alt="John" style="width:100%">
                 <div class="container">
                   <br>
-                  <h2>Hana Meilina</h2>
-                  <p class="title">Designer</p>
+                  <h3>Hana Meilina</h3>
+                  <p class="title">UI/UX & Front End Dev.</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>hanamasa@example.com</p>
+                  <p>hanmeiln@gmail.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
               </div>
