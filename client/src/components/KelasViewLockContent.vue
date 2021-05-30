@@ -1,15 +1,17 @@
 <template>
-
 <div class="body">
+    <div class="col-md-4 mt-4">
+    <div class="row mb-3">
   <div class="sidenav text-center"  v-for="classes in materials" :key="classes._id">
     <!-- <a class="active" href="#materi1">Materi 1</a> -->
     <a href="#materi2">{{classes.name}}</a>
     <!-- <a href="#materi3">Materi 3</a>
     <a href="#materi4">Materi 4</a> -->
   </div>
-
+  </div>
+  </div>
   <div class="content text-center">
-    <h2 style="font-weight: bold;">What is HTML?</h2>
+    <h2 style="font-weight: bold; margin-top:30px;">What is HTML?</h2>
     <br><br><br>
     <img src = "../assets/images/image 4.png" width="100px" style="border-radius: 50px;">
     <br><br>
@@ -18,6 +20,8 @@
     <b-button variant="warning"><a href="/login">Sign Up/Login</a></b-button>
   </div>
 </div>
+
+
 
 </template>
 
