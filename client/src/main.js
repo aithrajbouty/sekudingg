@@ -12,7 +12,7 @@ Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
 const base = axios.create({
-  baseURL: "http://localhost:3000"
+  baseURL: "https://api-sekuding.herokuapp.comlhost:3000"
 });
 
 Vue.prototype.$http = base;

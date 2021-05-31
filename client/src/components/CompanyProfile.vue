@@ -134,7 +134,7 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:3000/aboutUs/count"
+const API_URL = "https://api-sekuding.herokuapp.com/aboutUs/count"
 
 export default{
   data: () => ({

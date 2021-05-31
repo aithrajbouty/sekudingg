@@ -60,7 +60,7 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:3000/auth/login"
+const API_URL = "https://api-sekuding.herokuapp.com/auth/login"
 
 export default {
   //name : 'LoginContent',

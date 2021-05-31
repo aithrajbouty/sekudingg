@@ -98,7 +98,7 @@
 </style>
 
 <script>
-const API_URL = "http://localhost:3000/auth/register"
+const API_URL = "https://api-sekuding.herokuapp.com/auth/register"
 
 export default {
   data() {

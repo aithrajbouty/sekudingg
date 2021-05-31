@@ -29,7 +29,7 @@
 
 
 <script>
-const API_URL = "http://localhost:3000/module"
+const API_URL = "https://api-sekuding.herokuapp.com/module"
 
 export default{
   name: "ModuleContent",

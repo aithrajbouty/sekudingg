@@ -114,7 +114,7 @@
 </template>
 
 <script>
-const API_URL = "http://localhost:3000/profile/"
+const API_URL = "https://api-sekuding.herokuapp.com/profile/"
 
 export default {
   data: () => ({
@@ -142,7 +142,7 @@ export default {
 
     updateUser(e){
       const userid = this.user.id
-      const UPDATE_API_URL = "localhost:3000/profile/" + userid
+      const UPDATE_API_URL = "https://api-sekuding.herokuapp.com/profile/" + userid
       e.preventDefault()
       
       if (this.user.description.length > 0) {
