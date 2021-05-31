@@ -81,7 +81,7 @@
                   <br>
                   <h3>Kefilino K. F</h3>
                   <p class="title">Project Manager</p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>The Product Manager is responsible for managing the product and working closely with engineering to deliver winning products.</p>
                   <p>kefilino@live.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
@@ -93,9 +93,10 @@
                 <img src="../assets/images/aithrapic.jpg" alt="Mike" style="width:100%">
                 <div class="container">
                   <br>
-                  <h3>Aithra Junia</h3>
+                  <h3>Aithra Junia B</h3>
                   <p class="title">Back End Dev.</p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>Back End developers are responsible for creating and maintaining the server, database and application </p>
+                  <br>
                   <p>aithrabouty@gmail.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
@@ -108,7 +109,7 @@
                   <br>
                   <h3>Sharashena C</h3>
                   <p class="title">UI/UX & Front End Dev.</p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>Front End developer is responsible for implementing visual elements that users see and interact with in a web application.</p>
                   <p>shenaach@gmail.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
@@ -119,9 +120,9 @@
                 <img src="../assets/images/hanapic.jpg" alt="John" style="width:100%">
                 <div class="container">
                   <br>
-                  <h3>Hana Meilina</h3>
+                  <h3>Hana Meilina </h3>
                   <p class="title">UI/UX & Front End Dev.</p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                  <p>Front End developer is responsible for implementing visual elements that users see and interact with in a web application.</p>
                   <p>hanmeiln@gmail.com</p>
                   <p><button class="button">Contact</button></p>
                 </div>
@@ -129,6 +130,7 @@
             </div>
           </div>
         </div>
+        <br><br>
   </div>
 </template>
 
