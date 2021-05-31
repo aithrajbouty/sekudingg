@@ -1,7 +1,15 @@
 <template>
   <div class="kelas">
-    <div class="justify-content-center text-center" style="margin-top:30px;">
-        <button class="btn btn-lg btn-warning" color="#FEF9C7"><strong>HTML and CSS</strong></button>
+<div class="card card-title"
+                style="background: #FEF9C7;
+                width: 400px; 
+                left: 350px;
+                height: 45px;
+                box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+                text-align:center;
+                margin-top:100px;
+                margin-bottom:80px;">
+            <h2><strong>HTML & CSS</strong></h2>
     </div>
 
     <br>

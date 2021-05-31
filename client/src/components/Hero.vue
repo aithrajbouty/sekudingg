@@ -58,7 +58,7 @@
                   <div class="row">
                     <div class="col">
                       <div class="text-center">
-                      <img src="../assets/images/webdev.png" width="100%"/>  
+                      <img src="../assets/images/webdev.svg" width="100%"/>  
                       <span class="h4 font-weight-bold mb-0">Web Development</span>
                       </div>
                       </div>
@@ -75,7 +75,7 @@
                                   <div class="row">
                                     <div class="col">
                                       <div class="text-center">
-                                        <img src="../assets/images/webdesign.png" width="84%"/>
+                                        <img src="../assets/images/webdesign.svg" width="92%"/>
                                         <span class="h4 font-weight-bold mb-0">Web Design</span>
                                       </div>
                                       </div>
@@ -90,7 +90,7 @@
                                                 <div class="row">
                                                   <div class="col">
                                                     <div class="text-center">
-                                                      <img src="../assets/images/datascience.png" width="81%"/>
+                                                      <img src="../assets/images/datascience.svg" width="78%"/>
                                                       <span class="h4 font-weight-bold mb-0">Data Science</span>
                                                     </div>
                                                   </div>
@@ -105,7 +105,7 @@
                                                             <div class="row">
                                                               <div class="col">
                                                                 <div class="text-center">
-                                                                  <img src="../assets/images/comscience.png" width="84%"/>
+                                                                  <img src="../assets/images/computerscience.svg" width="84%"/>
                                                                   <span class="h4 font-weight-bold mb-0">Computer Science</span>
                                                                 </div>
                                                                 </div>
@@ -121,7 +121,7 @@
                                                             <div class="row">
                                                               <div class="col">
                                                                 <div class="text-center">
-                                                                  <img src="../assets/images/mobiledev.png" width="84%"/>
+                                                                  <img src="../assets/images/mobiledevelopment.svg" width="84%"/>
                                                                   <span class="h4 font-weight-bold mb-0">Mobile Development</span>
                                                                 </div>
                                                                 </div>
@@ -277,7 +277,7 @@ working through the program, I was offered a job as a front...</p>
                   <div class="row">
                     <div class="col">
                       <div class="text-center">
-                      <img src="../assets/images/webdev.png" width="100%"/>  
+                      <img src="../assets/images/webdev.svg" width="100%"/>  
                       <span class="h4 font-weight-bold mb-0">Web Development</span>
                       </div>
                       </div>
@@ -294,7 +294,7 @@ working through the program, I was offered a job as a front...</p>
                                   <div class="row">
                                     <div class="col">
                                       <div class="text-center">
-                                        <img src="../assets/images/webdesign.png" width="88%"/>
+                                        <img src="../assets/images/webdesign.svg" width="92%"/>
                                         <span class="h4 font-weight-bold mb-0">Web Design</span>
                                       </div>
                                       </div>
@@ -309,7 +309,7 @@ working through the program, I was offered a job as a front...</p>
                                                 <div class="row">
                                                   <div class="col">
                                                     <div class="text-center">
-                                                      <img src="../assets/images/datascience.png" width="88%"/>
+                                                      <img src="../assets/images/datascience.svg" width="88%"/>
                                                       <span class="h4 font-weight-bold mb-0">Data Science</span>
                                                     </div>
                                                   </div>
@@ -324,7 +324,7 @@ working through the program, I was offered a job as a front...</p>
                                                             <div class="row">
                                                               <div class="col">
                                                                 <div class="text-center">
-                                                                  <img src="../assets/images/comscience.png" width="84%"/>
+                                                                  <img src="../assets/images/computerscience.svg" width="84%"/>
                                                                   <span class="h4 font-weight-bold mb-0">Computer Science</span>
                                                                 </div>
                                                                 </div>
@@ -340,7 +340,7 @@ working through the program, I was offered a job as a front...</p>
                                                             <div class="row">
                                                               <div class="col">
                                                                 <div class="text-center">
-                                                                  <img src="../assets/images/mobiledev.png" width="84%"/>
+                                                                  <img src="../assets/images/mobiledevelopment.svg" width="84%"/>
                                                                   <span class="h4 font-weight-bold mb-0">Mobile Development</span>
                                                                 </div>
                                                                 </div>

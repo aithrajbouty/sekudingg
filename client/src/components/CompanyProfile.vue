@@ -10,9 +10,8 @@
         </div>
 
         <div class="overview">
-            <h4><strong>Overview of Sekuuuding</strong></h4>
+            <h2><strong>Overview of Sekuuuding</strong></h2>
         </div>
-        <br>
         <div class="row">
           <div class="col-sm-4">
             <div class="card" style="background-color: #FEF9C7;">
@@ -42,7 +41,7 @@
         </div>
 
         <div class="beliefs">
-           <h4><strong>Our Beliefs</strong></h4>
+           <h2><strong>Our Beliefs</strong></h2>
         </div>
         <div class="isibeliefs">
           <div class="mt-4">
@@ -56,15 +55,15 @@
         <div class="mt-4">
             <b-card img-src="https://pbs.twimg.com/media/EyNW7xOUcAIDHLl?format=png&name=360x360" img-alt="Card image" img-left class="mb-4" style="padding:10px;">
               <b-card-text>
-                <strong>Education should be free and accessible</strong><br>
-                Our curriculum is full of video projects that will help you build a strong portfolio of work on Github to fill out your resume.
+                <strong>You learn best by actually building</strong><br>
+                Sekuuuding curriculum is full of video projects that will help you build a strong portfolio of work on Github to fill out your resume.
               </b-card-text>
             </b-card>
         </div>
         <div class="mt-4">
             <b-card img-src="https://pbs.twimg.com/media/EyNXvkNVgAYHTPJ?format=png&name=360x360" img-alt="Card image" img-left class="mb-4" style="padding:10px;">
               <b-card-text>
-                <strong>Education should be free and accessible</strong><br>
+                <strong>Motivation is fueled by working with others</strong><br>
                 We're committed to connecting students together so they can stay motivated and learn faster.
               </b-card-text>
             </b-card>
@@ -73,7 +72,7 @@
         <br><br>
 
         <div class="ourteam">
-          <h2 style="text-align:center"><strong>Our Team</strong></h2>
+          <h2 style="text-align:center"><strong>Our Team</strong></h2><br>
           <div class="row">
             <div class="col-lg">
               <div class="card">
