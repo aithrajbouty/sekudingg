@@ -28,19 +28,19 @@
                                     <div class="col">
                                    </div></div>
     <div class="text-center"><h5 class="h3">
-        {{user.full_name}}
-        <span class="font-weight-light">, {{user.age}}</span>
-        </h5><div class="h5 font-weight-300">
+      {{user.full_name}}
+      <span v-if="ageNotNull" class="font-weight-light">, {{user.age}}</span></h5>
+      <div class="h5 font-weight-300">
           <i class="ni location_pin mr-2"></i>{{user.email}}
       </div>
-      <div class="h5 mt-4">
+      <!-- <div class="h5 mt-4">
         <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
       </div><div>
         <i class="ni education_hat mr-2"></i>University of Computer Science
-      </div>
+      </div> -->
       <hr class="my-4">
       <p>{{user.description}}</p>
-      </div></div></div></div>
+    </div></div></div></div>
       <div class="order-xl-1 col-xl-8">
           <div class="card">
             <div class="card-header">
@@ -58,7 +58,6 @@
                                 <div tabindex="-1" role="group" class="bv-no-focus-ring">
                                   <label class="form-control-label">
                                     Username
-                                    <!-- DESCRIPTION -->
                                   </label>
                                   <div class="has-label">
                                     <input v-model="user.username" type="text" placeholder="Username" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div><div class="col-lg-6"><span placeholder="mike@email.com"><fieldset class="form-group" id="__BVID__87"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
@@ -66,14 +65,14 @@
                                   </label>
                                   <div class="has-label">
                                     <input v-model="user.email" type="email" placeholder="mike@email.com" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div></div><div class="row"><div class="col-lg-6"><span placeholder="First Name"><fieldset class="form-group" id="__BVID__90"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
-                                    First Name
+                                    Full Name
                                   </label>
                                   <div class="has-label">
-                                    <input v-model="user.full_name" type="text" placeholder="First Name" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div><div class="col-lg-6"><span placeholder="Last Name"><fieldset class="form-group" id="__BVID__93"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
-                                    Last Name
+                                    <input v-model="user.full_name" type="text" placeholder="Full Name" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div><div class="col-lg-6"><span placeholder="Last Name"><fieldset class="form-group" id="__BVID__93"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
+                                    Age
                                   </label>
                                   <div class="has-label">
-                                    <input type="text" placeholder="Last Name" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div></div></div><hr class="my-4"><h6 class="heading-small text-muted mb-4">Contact information</h6><div class="pl-lg-4"><div class="row"><div class="col-md-12"><span placeholder="Home Address"><fieldset class="form-group" id="__BVID__96"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
+                                    <input v-model="user.age" type="text" placeholder="Age" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div></div></div><hr class="my-4"><h6 class="heading-small text-muted mb-4">Contact information</h6><div class="pl-lg-4"><div class="row"><div class="col-md-12"><span placeholder="Home Address"><fieldset class="form-group" id="__BVID__96"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
                                     Address
                                   </label>
                                   <div class="has-label">
@@ -133,32 +132,30 @@ export default {
     });
   },
 
-  methods: {
-    // userData(){
-    //   if(this.user == null){
-    //     this.user = "-"
-    //   }
-    // },
+  computed: {
+    ageNotNull : function() {return this.user.age != null}
+  },
 
-    updateUser(e){
+  methods: {
+    updateUser(){
       const userid = this.user.id
       const UPDATE_API_URL = `${process.env.VUE_APP_API_URL}/profile/` + userid
-      e.preventDefault()
-      
-      if (this.user.description.length > 0) {
-        this.$http.put(UPDATE_API_URL, this.user)
-        // .then(response => {
-        //   localStorage.setItem('token',response.data.token)
 
-        //   if (localStorage.getItem('token') != null){
-        //       this.$emit('loggedIn')
-        //       this.$router.push('modulsaya')
-        //   }
-        // })
-        .catch(function (error) {
-          console.error(error.response);
+      fetch(UPDATE_API_URL, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: this.user.username,
+          email: this.user.email,
+          full_name: this.user.full_name,
+          // description: this.user.description,
+          age: this.user.age
         })
-      }
+      })
+
+      window.location = "/profile"
     }
   }
 }

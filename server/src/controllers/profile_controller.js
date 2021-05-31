@@ -30,10 +30,10 @@ exports.updateUser = async (req, res) => {
     try{
         const { id } = req.params;
         const { description } = req.body;
-        // const { age } = req.body;
+        const { age } = req.body;
 
-        const module = await pool.query("UPDATE users SET description = $1 WHERE id = $2",
-        [description, id])
+        const module = await pool.query("UPDATE users SET description = $1, age = $2 WHERE id = $3",
+        [description, age, id])
 
         res.json("User detail is updated!")
     }catch(err){
