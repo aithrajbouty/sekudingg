@@ -32,20 +32,9 @@
                             v-model="login.password" required
                         /> 
                     </div>
-                    <div class="row px-3 mt-3 mb-4 ml-1">
-                        <div class="custom-control custom-checkbox custom-control-inline"> 
-                            <input 
-                                id="chk1" 
-                                type="checkbox" 
-                                name="chk" 
-                                class="custom-control-input"
-                            /> 
-                            <label for="chk1" class="custom-control-label text-sm"><strong>Show Password</strong></label> 
-                        </div> 
-                        <a href="#" style="text-decoration: none;" class="ml-auto mb-0 text-warning"><strong>Forgot Password?</strong></a>
-                    </div>
-                    <div class="row mb-3 px-3"> 
-                        <button type="submit" class="btn btn-warning text-center" style="width: 150px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;">Login</button> 
+                    
+                    <div class="row mb-3 px-3" style="margin-top:20px; margin-left:110px;"> 
+                        <button type="submit" class="btn btn-warning text-center" style="width: 300px; height:50px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 100px;"><strong>Login</strong></button> 
                     </div>
                     <div class="row mb-4 px-3"> 
                         <small class="font-weight-bold">Doesn’t have an account yet?  

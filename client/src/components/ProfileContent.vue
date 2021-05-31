@@ -64,7 +64,15 @@
                                     Email address
                                   </label>
                                   <div class="has-label">
-                                    <input v-model="user.email" type="email" placeholder="mike@email.com" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div></div><div class="row"><div class="col-lg-6"><span placeholder="First Name"><fieldset class="form-group" id="__BVID__90"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
+                                    <input v-model="user.email" type="email" placeholder="mike@email.com" class="form-control" valid="true"><!---->
+                                    </div></div></fieldset></span></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-lg-6">
+                                        <span placeholder="First Name">
+                                          <fieldset class="form-group" id="__BVID__90">
+                                        <div tabindex="-1" role="group" class="bv-no-focus-ring">
+                                          <label class="form-control-label">
                                     Full Name
                                   </label>
                                   <div class="has-label">
@@ -72,30 +80,15 @@
                                     Age
                                   </label>
                                   <div class="has-label">
-                                    <input v-model="user.age" type="text" placeholder="Age" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div></div></div><hr class="my-4"><h6 class="heading-small text-muted mb-4">Contact information</h6><div class="pl-lg-4"><div class="row"><div class="col-md-12"><span placeholder="Home Address"><fieldset class="form-group" id="__BVID__96"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
-                                    Address
-                                  </label>
-                                  <div class="has-label">
-                                    <input type="text" placeholder="Home Address" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div></div><div class="row"><div class="col-lg-4"><span placeholder="City"><fieldset class="form-group" id="__BVID__99"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
-                                    City
-                                  </label>
-                                  <div class="has-label">
-                                    <input type="text" placeholder="City" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div><div class="col-lg-4"><span placeholder="Country"><fieldset class="form-group" id="__BVID__102"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
-                                    Country
-                                  </label>
-                                  <div class="has-label">
-                                    <input type="text" placeholder="Country" class="form-control" valid="true"><!----></div><!----><!----><!----><!----><!----></div></fieldset></span></div><div class="col-lg-4"><span placeholder="ZIP Code"><fieldset class="form-group" id="__BVID__105"><!----><div tabindex="-1" role="group" class="bv-no-focus-ring"><label class="form-control-label">
-                                    Postal Code
-                                  </label>
-                                  <div class="has-label">
-                                      <input type="text" placeholder="ZIP Code" class="form-control" valid="true"></div>
-                                      </div></fieldset></span></div></div></div>
+                                    <input v-model="user.age" type="text" placeholder="Age" class="form-control" valid="true"><!---->
+                                    </div>
+                                    </div></fieldset></span></div></div></div>
                                       <hr class="my-4">
                                       <h6 class="heading-small text-muted mb-4">About me</h6>
                                       <div class="pl-lg-4">
                                           <div role="group" class="form-group mb-0" id="__BVID__106">
                                               <div class="bv-no-focus-ring">
-                                                  <textarea id="about-form-textaria" placeholder="A few words about you ..." rows="4" wrap="soft" class="form-control"></textarea>
+                                                  <textarea v-model="user.description" id="about-form-textaria" placeholder="A few words about you ..." rows="4" wrap="soft" class="form-control"></textarea>
                                                   </div></div></div>
                                                   
                                                   <div class="col-sm-10 mt-4 text-right" style="margin-bottom:20px;">
@@ -150,7 +143,7 @@ export default {
           username: this.user.username,
           email: this.user.email,
           full_name: this.user.full_name,
-          // description: this.user.description,
+          description: this.user.description,
           age: this.user.age
         })
       })

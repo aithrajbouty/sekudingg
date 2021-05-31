@@ -76,7 +76,7 @@
           <div class="row">
             <div class="col-lg">
               <div class="card" style="background: #FEF9C7; border-radius: 20px;">
-                <img src="../assets/images/kefilpic.jpg" alt="Jane" style="width:100%">
+                <img src="../assets/images/kefilpic.jpg" alt="Jane" style="width:100%;border-radius: 20px;">
                 <div class="container">
                   <br>
                   <h3>Kefilino K. F</h3>
@@ -90,7 +90,7 @@
 
             <div class="col-lg">
               <div class="card" style="background: #FEF9C7; border-radius: 20px;">
-                <img src="../assets/images/aithrapic.jpg" alt="Mike" style="width:100%">
+                <img src="../assets/images/aithrapic.jpg" alt="Mike" style="width:100%;border-radius: 20px;">
                 <div class="container">
                   <br>
                   <h3>Aithra Junia B</h3>
@@ -104,7 +104,7 @@
             </div>
             <div class="col-lg">
               <div class="card" style="background: #FEF9C7; border-radius: 20px;">
-                <img src="../assets/images/shenapics.jpg" alt="John" style="width:100%">
+                <img src="../assets/images/shenapics.jpg" alt="John" style="width:100%;border-radius: 20px;">
                 <div class="container">
                   <br>
                   <h3>Sharashena C</h3>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-lg">
               <div class="card" style="background: #FEF9C7; border-radius: 20px;">
-                <img src="../assets/images/hanapic.jpg" alt="John" style="width:100%">
+                <img src="../assets/images/hanapic.jpg" alt="John" style="width:100%; border-radius: 20px;">
                 <div class="container">
                   <br>
                   <h3>Hana Meilina </h3>
