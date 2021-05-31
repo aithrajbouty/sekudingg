@@ -29,7 +29,7 @@
 
 
 <script>
-const API_URL = "https://api-sekuding.herokuapp.com/module"
+const API_URL = `${process.env.VUE_APP_API_URL}/module`
 
 export default{
   name: "ModuleContent",

@@ -4,5 +4,11 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Sekuding"
+}
+</script>
+
 <style>
 </style>

@@ -60,7 +60,7 @@
 </template>
 
 <script>
-const API_URL = "https://api-sekuding.herokuapp.com/auth/login"
+const API_URL = `${process.env.VUE_APP_API_URL}/auth/login`
 
 export default {
   //name : 'LoginContent',

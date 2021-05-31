@@ -98,7 +98,7 @@
 </style>
 
 <script>
-const API_URL = "https://api-sekuding.herokuapp.com/auth/register"
+const API_URL = `${process.env.VUE_APP_API_URL}/auth/register`
 
 export default {
   data() {

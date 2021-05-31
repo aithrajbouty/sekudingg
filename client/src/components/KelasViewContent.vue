@@ -86,7 +86,7 @@
 
     mounted(){
     const moduleid = this.$route.params.moduleid
-    const MODULE_API_URL = "https://api-sekuding.herokuapp.com/module/" + moduleid + "/material"
+    const MODULE_API_URL = `${process.env.VUE_APP_API_URL}/module/` + moduleid + "/material"
 
     fetch(MODULE_API_URL)
       .then(response => response.json())
