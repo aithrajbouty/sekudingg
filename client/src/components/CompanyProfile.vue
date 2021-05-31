@@ -1,6 +1,6 @@
 <template>
   <div class="companyprofile" style="margin-top:150px;">
-      <div class="card">
+      <div class="card" style="background: #FEF9C7; border-radius: 20px;">
           <div class="card-body" style="background-color: #FEF9C7;">
             <h2 class="card-title"><strong>About Sekuuu.ding</strong></h2>
             <br>
@@ -14,7 +14,7 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <div class="card" style="background-color: #FEF9C7;">
+            <div class="card" style="background: #FEF9C7; border-radius: 20px;">
               <div class="card-body">
                 <h5 class="card-title"><strong>{{totalUsers.count}}</strong></h5>
                 <p class="card-text">Learners</p>
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="card" style="background-color: #FEF9C7;">
+            <div class="card" style="background: #FEF9C7; border-radius: 20px;">
               <div class="card-body">
                 <h5 class="card-title"><strong>4</strong></h5>
                 <p class="card-text">Teams</p>
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="card" style="background-color: #FEF9C7;">
+            <div class="card" style="background: #FEF9C7; border-radius: 20px;">
               <div class="card-body">
                 <h5 class="card-title"><strong>2021</strong></h5>
                 <p class="card-text">Founded</p>
@@ -75,7 +75,7 @@
           <h2 style="text-align:center"><strong>Our Team</strong></h2><br>
           <div class="row">
             <div class="col-lg">
-              <div class="card">
+              <div class="card" style="background: #FEF9C7; border-radius: 20px;">
                 <img src="../assets/images/kefilpic.jpg" alt="Jane" style="width:100%">
                 <div class="container">
                   <br>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="col-lg">
-              <div class="card">
+              <div class="card" style="background: #FEF9C7; border-radius: 20px;">
                 <img src="../assets/images/aithrapic.jpg" alt="Mike" style="width:100%">
                 <div class="container">
                   <br>
@@ -102,7 +102,7 @@
               </div>
             </div>
             <div class="col-lg">
-              <div class="card">
+              <div class="card" style="background: #FEF9C7; border-radius: 20px;">
                 <img src="../assets/images/shenapics.jpg" alt="John" style="width:100%">
                 <div class="container">
                   <br>
@@ -115,7 +115,7 @@
               </div>
             </div>
             <div class="col-lg">
-              <div class="card">
+              <div class="card" style="background: #FEF9C7; border-radius: 20px;">
                 <img src="../assets/images/hanapic.jpg" alt="John" style="width:100%">
                 <div class="container">
                   <br>
@@ -155,7 +155,7 @@ export default{
 </script>
 
 <style>
-.card{
+.card {
   background: #FEF9C7;
   border-radius: 20px;
 }
