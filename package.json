@@ -4,9 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "server": "nodemon app.js --ignore 'client/'",
-    "client": "npm run serve --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "server": "nodemon app.js --ignore 'client/'"
   },
   "author": "",
   "license": "ISC",
