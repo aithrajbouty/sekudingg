@@ -12,12 +12,12 @@
         style="border-radius: 50px"
       />
       <br /><br />
-      <p style="font-weight: bold">Aithra Junia Bouty</p>
+      <p style="font-weight: bold">{{ modul.author }}</p>
       <p>Front End Developer at Tokopaedi</p>
 
       <div class="col">
         <div class="row" v-for="(classes, index) in materials" :key="classes.id">
-          <a @click="currentMaterial = index">{{ classes.id }}</a>
+          <a @click="currentMaterial = index">{{ classes.name }}</a>
         </div>
       </div>
     </div>
@@ -96,6 +96,7 @@ export default {
     return {
       value: 33.333333333,
       max: 100,
+      modul: [],
       materials: [],
       currentMaterial: "0"
     };
@@ -110,6 +111,12 @@ export default {
       .then((response) => response.json())
       .then((result) => {
         this.materials = result;
+      });
+
+    fetch(`${process.env.VUE_APP_API_URL}/module/${moduleid}`)
+      .then((response) => response.json())
+      .then((result) => {
+        this.modul = result;
       });
 
     console.log(this.$route.params.moduleid);
