@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "npn server",
+    "start": "npm server",
     "server": "nodemon app.js"
   },
   "author": "",
