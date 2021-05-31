@@ -38,9 +38,9 @@ const CoursesSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "enrollments"
     }],
-    sections_id: {
+    materials: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "sections"
+        ref: "materials"
     }
 })
 
