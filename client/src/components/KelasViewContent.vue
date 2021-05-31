@@ -87,6 +87,7 @@
     mounted(){
     const moduleid = this.$route.params.moduleid
     const MODULE_API_URL = `${process.env.VUE_APP_API_URL}/module/` + moduleid + "/material"
+    console.log(MODULE_API_URL)
 
     fetch(MODULE_API_URL)
       .then(response => response.json())
