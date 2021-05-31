@@ -155,10 +155,6 @@ export default{
 </script>
 
 <style>
-.card {
-  background: #FEF9C7;
-  border-radius: 20px;
-}
 .overview{
   text-align: center;
   margin-top: 50px;
