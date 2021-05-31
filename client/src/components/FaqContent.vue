@@ -55,6 +55,7 @@ The trick is to click the Login / Sign Up Button, then select "You don't have an
         </b-card-body>
       </b-collapse>
     </b-card>
+    <br><br>
   </div>
 
 </template>

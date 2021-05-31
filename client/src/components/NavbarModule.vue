@@ -4,23 +4,20 @@
             <div class="container-fluid">
             <div>
             <b-dropdown id="dropdown-1" text="Sort" class="m-md-3">
-                <b-dropdown-item>First Action</b-dropdown-item>
-                <b-dropdown-item>Second Action</b-dropdown-item>
-                <b-dropdown-item>Third Action</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-item active>Active action</b-dropdown-item>
-                <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+                <b-dropdown-item>Ascending</b-dropdown-item>
+                <b-dropdown-item>Descending</b-dropdown-item>
+                <b-dropdown-item>Newest</b-dropdown-item>
+                <b-dropdown-item>Oldest</b-dropdown-item>
             </b-dropdown>
             </div>
 
             <div>
             <b-dropdown id="dropdown-1" text="Filter" class="m-md-3">
-                <b-dropdown-item>First Action</b-dropdown-item>
-                <b-dropdown-item>Second Action</b-dropdown-item>
-                <b-dropdown-item>Third Action</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-item active>Active action</b-dropdown-item>
-                <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+                <b-dropdown-item active>Web Development</b-dropdown-item>
+                <b-dropdown-item>Web Design</b-dropdown-item>
+                <b-dropdown-item>Data Science</b-dropdown-item>
+                <b-dropdown-item>Computer Science</b-dropdown-item>
+                <b-dropdown-item>Mobile Development</b-dropdown-item>
             </b-dropdown>
             </div>
 
