@@ -1,7 +1,14 @@
 <template>
   <div class="module">
-    <div class="justify-content-center align-self-center">
-        <button class="btn btn-lg btn-warning" color="#FEF9C7"><strong>Web Development</strong></button>
+    <div class="card card-title"
+                style="background: #FEF9C7;
+                width: 400px; 
+                left: 350px;
+                height: 45px;
+                box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+                text-align:center;
+                margin-bottom:80px;">
+            <h2><strong>Web Development</strong></h2>
     </div>
 
     <div class="row mb-3">
