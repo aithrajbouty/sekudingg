@@ -11,113 +11,78 @@
                 margin-bottom:80px;">
             <h2><strong>Web Development</strong></h2>
     </div>
-          <button class="btn btn-lg btn-warning" color="#E02780" @click=logUserOut><strong>LOGOUT</strong></button>
       </div>
 
       <div class="row mb-3">
-        <div class="col-md-4 mt-4">
+        <div class="col-md-4 mt-4" v-for="modules in courses" :key="modules.id">
           <div>
-            <b-card
-              img-src="https://files.virgool.io/upload/users/240685/posts/bqlf6p609poi/hnolxu1til2y.png?x-img=v1/resize,w_700/optimize,q_100"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem; background-color : #FEF9C7"
-              class="mb-2"
-            >
-            <p align="Justify">This course will teach you how to design a web page using HTML</p>
-            <p align="Right">Free</p>
-            </b-card>
+            <router-link :to="{ name: 'KelasView', params: { moduleid: modules.id }}">
+            <!-- <a href="/kelasview"> -->
+              <b-card
+                img-v-if="modules.image" :img-src="modules.image" :img-alt="modules.name"
+                img-top
+                tag="article"
+                style="max-width: 20rem; background-color : #FEF9C7"
+                class="mb-2"
+              >
+              <p align="Justify">{{modules.description}}</p>
+              <p align="Right">{{modules.price}}</p>
+              </b-card>
+            <!-- </a> -->
+            </router-link>
           </div>
         </div>
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              img-src="https://www.abdullahkus.com/wp-content/uploads/2020/05/php.jpg"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem; background-color : #FEF9C7"
-              class="mb-2"
-            >
-            <p align="Justify">PHP enables you to create develop websites and generate dynamic content</p>
-            <p align="Right">Free</p>
-            </b-card>
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              img-src="https://i.ytimg.com/vi/_mj72QqsOs4/maxresdefault.jpg"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem; background-color : #FEF9C7"
-              class="mb-2"
-            >
-            <p align="Justify">Learn all the basic features of JavaScript, including making your website more interactive</p>
-            <br>
-            <p align="Right">Free</p>
-            </b-card>
-          </div>
-        </div>
-                <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              img-src="https://miro.medium.com/max/900/1*OrjCKmou1jT4It5so5gvOA.jpeg"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem; background-color : #FEF9C7"
-              class="mb-2"
-            >
-            <p align="Justify">Vue Js enables you to create develop websites and generate dynamic content</p>
-            <p align="Right">Free</p>
-            </b-card>
-          </div>
-        </div>
-                <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              img-src="https://files.virgool.io/upload/users/240685/posts/bqlf6p609poi/hnolxu1til2y.png?x-img=v1/resize,w_700/optimize,q_100"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem; background-color : #FEF9C7"
-              class="mb-2"
-            >
-            <p align="Justify">This course will teach you how to design a web page using HTML</p>
-            <p align="Right">Free</p>
-            </b-card>
-          </div>
-        </div>
-                <div class="col-md-4 mt-4">
-          <div>
-            <b-card
-              img-src="https://files.virgool.io/upload/users/240685/posts/bqlf6p609poi/hnolxu1til2y.png?x-img=v1/resize,w_700/optimize,q_100"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem; background-color : #FEF9C7"
-              class="mb-2"
-            >
-            <p align="Justify">This course will teach you how to design a web page using HTML</p>
-            <p align="Right">Free</p>
-            </b-card>
-          </div>
-        </div>
-    </div>
+      </div>
   </div>
 </template>
 
 <script>
-// import swal from "sweetalert";
+const API_URL = `${process.env.VUE_APP_API_URL}/profile/`
+//const MODULSAYA_API_URL = `${process.env.VUE_APP_API_URL}/modulSaya/`
+
 export default {
+  data: () => ({
+    error: "",
+    courses: [],
+    user: []
+  }),
+
+  mounted(){
+    const headers = { token: localStorage.token };
+    fetch(API_URL, { headers })
+    .then(response => response.json())
+    .then(result => {
+      this.user = result;
+
+      const MODULSAYA_API_URL = `${process.env.VUE_APP_API_URL}/modulSaya/${this.user.id }`
+      fetch(MODULSAYA_API_URL)
+        .then(response => response.json())
+        .then(result => {
+          this.courses = result
+        })
+    });
+
+    
+  },
+
   methods: {
     logUserOut(){
       localStorage.removeItem("token")
       this.$router.push("/login")
-    }
+    },
+
+    // modulsaya(){
+    //   const userid = this.user.id 
+    //   const MODULSAYA_API_URL = `${process.env.VUE_APP_API_URL}/modulSaya/` + userid 
+    //   fetch(MODULSAYA_API_URL)
+    //     .then(response => response.json())
+    //     .then(result => {
+    //       this.courses = result
+    //       var parsedobj = JSON.parse(JSON.stringify(result))
+    //       console.log(parsedobj)
+    //       console.log("user id = " + this.user.id)
+    //     })
+    // }
   }
 }
 </script>

@@ -15,6 +15,9 @@
       <b-navbar-nav style="margin-left:auto;">
         <b-nav-item href="/">Home</b-nav-item>
         <b-nav-item href="/module">Module</b-nav-item>
+        <span v-if="isLoggedIn">
+          <b-nav-item href="/modulsaya">Modul Saya</b-nav-item>
+        </span>
         <b-nav-item href="/contactus">Contact Us</b-nav-item>
         <b-nav-item href="/aboutus">About Us</b-nav-item>
         <b-nav-item href="/faq">FAQ</b-nav-item>

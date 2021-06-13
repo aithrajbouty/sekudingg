@@ -37,12 +37,14 @@
 
 <script>
 const API_URL = `${process.env.VUE_APP_API_URL}/module`
+const USER_API_URL = `${process.env.VUE_APP_API_URL}/profile/`
 
 export default{
   name: "ModuleContent",
   data: () => ({
     error: "",
-    courses: []
+    courses: [],
+    user: []
   }),
 
   mounted(){
@@ -50,9 +52,25 @@ export default{
       .then(response => response.json())
       .then(result => {
         this.courses = result;
+        var parsedobj = JSON.parse(JSON.stringify(result))
+        console.log(parsedobj)
       });
+    
+    const headers = { token: localStorage.token };
+    fetch(USER_API_URL, { headers })
+    .then(response => response.json())
+    .then(result => {
+      this.user = result;
+    });
   },
-  methods: {}
+
+  methods: {
+    enrollUserToModule(){
+      const userid = this.user.id
+      var parsedobj = JSON.parse(JSON.stringify(userid))
+      console.log("user id = " + parsedobj)
+    }
+  }
 };
 </script>
 
