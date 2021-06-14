@@ -53,12 +53,16 @@ export default {
     .then(response => response.json())
     .then(result => {
       this.user = result;
+      var parsedobj = JSON.parse(JSON.stringify(result))
+      console.log(parsedobj)
 
       const MODULSAYA_API_URL = `${process.env.VUE_APP_API_URL}/modulSaya/${this.user.id }`
       fetch(MODULSAYA_API_URL)
         .then(response => response.json())
         .then(result => {
           this.courses = result
+          var parsedobj = JSON.parse(JSON.stringify(result))
+          console.log(parsedobj)
         })
     });
 
@@ -66,11 +70,6 @@ export default {
   },
 
   methods: {
-    logUserOut(){
-      localStorage.removeItem("token")
-      this.$router.push("/login")
-    },
-
     // modulsaya(){
     //   const userid = this.user.id 
     //   const MODULSAYA_API_URL = `${process.env.VUE_APP_API_URL}/modulSaya/` + userid 
