@@ -65,7 +65,7 @@ const routes = [
     meta: {guest: true}
   },
   {
-    path: '/kelas',
+    path: '/kelas/:moduleid',
     name: 'Kelas',
     component: Kelas
   },

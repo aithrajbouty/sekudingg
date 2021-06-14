@@ -14,7 +14,7 @@
     <div class="row mb-3">
       <div class="col-md-4 mt-4" v-for="modules in courses" :key="modules.id">
         <div>
-          <router-link :to="{ name: 'KelasView', params: { moduleid: modules.id }}">
+          <router-link :to="{ name: 'Kelas', params: { moduleid: modules.id }}">
           <!-- <a href="/kelasview"> -->
             <b-card
               img-v-if="modules.image" :img-src="modules.image" :img-alt="modules.name"
