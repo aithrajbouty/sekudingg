@@ -85,3 +85,42 @@ exports.selectMaterialsByCourse = async (req, res) => {
         res.json({ message: err })
     }
 }
+
+exports.getProgression = async (req, res) => {
+    try {
+        const { user_id } = req.params
+        const { module_id } = req.params
+        const enrollment = await pool.query(
+            "SELECT enrollments.id AS id FROM enrollments JOIN users ON users.id = enrollments.student_id JOIN courses ON courses.id = enrollments.course_id WHERE users.id = $1 AND courses.id = $2",
+            [user_id, module_id]
+        )
+        
+        const progression = await pool.query("SELECT * FROM progressions WHERE enrollment_id = $1", [enrollment.rows[0].id])
+
+        res.json(progression.rows)
+    } catch(err){
+        res.json({ message: err })
+    }
+}
+
+exports.updateProgression = async (req, res) => {
+    try{
+        const { user_id } = req.body
+        const { module_id } = req.body
+        const { material_id } = req.body
+        const enrollment = await pool.query(
+            "SELECT enrollments.id AS id FROM enrollments JOIN users ON users.id = enrollments.student_id JOIN courses ON courses.id = enrollments.course_id WHERE users.id = $1 AND courses.id = $2",
+            [user_id, module_id]
+        )
+
+        const enrollment_id = enrollment.rows[0].id
+        const progression = await pool.query(
+            "INSERT INTO progressions (enrollment_id, material_id) SELECT $1, $2 WHERE NOT EXISTS (SELECT 1 FROM progressions WHERE enrollment_id=$1 AND material_id=$2)",
+            [enrollment_id, material_id]
+        )
+
+        res.json("Successfully added progression!")
+    }catch(err){
+        res.json({ message: err })
+    }
+}

@@ -17,6 +17,7 @@ const profileRoute = require("./routes/profile_route")
 const materialRoute = require("./routes/materials_route")
 const aboutUsRoute = require("./routes/aboutUs_route")
 const modulSayaRoute = require("./routes/modulsaya_route")
+const progressionRoute = require("./routes/progression_route")
 
 app.use("/auth", authRoute)
 app.use("/module", moduleRoute)
@@ -24,6 +25,7 @@ app.use("/profile", profileRoute)
 app.use("/material", materialRoute)
 app.use("/aboutUs", aboutUsRoute)
 app.use("/modulSaya", modulSayaRoute)
+app.use("/progress", progressionRoute)
 
 //LISTEN
 app.listen(process.env.PORT || 3000, () => {

@@ -16,8 +16,17 @@
       <p>Front End Developer at Tokopaedi</p>
 
       <div class="col">
-        <div class="row" v-for="(classes, index) in materials" :key="classes.id">
-          <a @click="currentMaterial = index">{{ classes.name }}</a>
+        <div
+          class="row"
+          v-for="(classes, index) in materials"
+          :key="classes.id"
+        >
+          <a
+            @click="
+              currentMaterial = index;
+            "
+            >{{ classes.name }}</a
+          >
         </div>
       </div>
     </div>
@@ -25,16 +34,22 @@
     <div class="content">
       <h2 style="font-weight: bold">{{ getCurrentMaterial.name }}</h2>
       <br />
-      <iframe :src="'https://www.youtube.com/embed/' + parseUrlId(getCurrentMaterial.video_path)"
+      <iframe
+        :src="
+          'https://www.youtube.com/embed/' +
+          parseUrlId(getCurrentMaterial.video_path)
+        "
         width="835"
         height="460"
+        @load="markMaterialAsComplete(getCurrentMaterial.id)"
       >
       </iframe>
       <br />
       <b-progress :max="max" height="2rem">
-        <b-progress-bar :value="value">
+        <b-progress-bar :value="getProgression">
           <span
-            >Progress: <strong>{{ value.toFixed(2) }} / {{ max }}</strong></span
+            >Progress:
+            <strong>{{ getProgression.toFixed(0) }} / {{ max }}</strong></span
           >
         </b-progress-bar>
       </b-progress>
@@ -94,23 +109,26 @@ body {
 export default {
   data() {
     return {
-      value: 33.333333333,
       max: 100,
       modul: [],
       materials: [],
-      currentMaterial: "0"
+      currentMaterial: "0",
+      progressions: [],
+      user: [],
     };
   },
 
-  mounted() {
+  created() {
     const moduleid = this.$route.params.moduleid;
     const MODULE_API_URL =
       `${process.env.VUE_APP_API_URL}/module/` + moduleid + "/material";
+    const USER_API_URL = `${process.env.VUE_APP_API_URL}/profile/`;
+    const headers = { token: localStorage.token };
 
-    fetch(MODULE_API_URL)
+    fetch(USER_API_URL, { headers })
       .then((response) => response.json())
       .then((result) => {
-        this.materials = result;
+        this.user = result;
       });
 
     fetch(`${process.env.VUE_APP_API_URL}/module/${moduleid}`)
@@ -119,20 +137,48 @@ export default {
         this.modul = result;
       });
 
-    console.log(this.$route.params.moduleid);
+    fetch(MODULE_API_URL)
+      .then((response) => response.json())
+      .then((result) => {
+        this.materials = result;
+      });
   },
-  
+
   methods: {
     parseUrlId(url) {
       return url.split("v=")[1];
+    },
+    markMaterialAsComplete(materialid) {
+      const PROGRESSION_API_URL = `${process.env.VUE_APP_API_URL}/progress`;
+
+      const req = {
+        user_id: this.user.id,
+        module_id: this.modul.id,
+        material_id: materialid,
+      };
+
+      this.$http.post(PROGRESSION_API_URL, req).catch((error) => {
+        console.error(error);
+      });
+    },
+    updateProgression() {
+      const PROGRESSION_API_URL = `${process.env.VUE_APP_API_URL}/progress`;
+      fetch(`${PROGRESSION_API_URL}/${this.user.id}&${this.modul.id}`)
+        .then((response) => response.json())
+        .then((result) => {
+          this.progressions = result;
+        });
     }
   },
 
   computed: {
-    getCurrentMaterial () {
+    getCurrentMaterial() {
       return this.materials[this.currentMaterial];
+    },
+    getProgression() {
+      this.updateProgression();
+      return (this.progressions.length * 100) / this.materials.length;
     }
-
-  }
+  },
 };
 </script>
