@@ -54,7 +54,7 @@
         </b-progress-bar>
       </b-progress>
       <br />
-      <b-button variant="warning" style="float: right">Next</b-button>
+      <b-button variant="warning" style="float: right" @click="loadNextMaterial()">Next</b-button>
       <br /><br />
     </div>
   </div>
@@ -112,7 +112,7 @@ export default {
       max: 100,
       modul: [],
       materials: [],
-      currentMaterial: "0",
+      currentMaterial: 0,
       progressions: [],
       user: [],
     };
@@ -168,6 +168,10 @@ export default {
         .then((result) => {
           this.progressions = result;
         });
+    },
+    loadNextMaterial() {
+      this.currentMaterial += 1;
+      this.currentMaterial %= this.materials.length;
     }
   },
 
