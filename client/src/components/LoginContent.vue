@@ -72,7 +72,7 @@ export default {
 
                     if (localStorage.getItem('token') != null){
                         this.$emit('loggedIn')
-                        this.$router.push('module')
+                        this.$router.push('Modulsaya')
                     }
                 })
                 .catch(function (error) {

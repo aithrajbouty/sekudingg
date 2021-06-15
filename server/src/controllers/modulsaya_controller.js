@@ -5,7 +5,7 @@ exports.enrollStudent = async (req, res) => {
         const { student_id } = req.body;
         const { course_id } = req.body;
         const enroll = await pool.query(
-            "INSERT INTO enrollments (student_id, course_id) VALUES ($1, $2) RETURNING *",
+            "INSERT INTO enrollments (student_id, course_id) SELECT $1, $2 WHERE NOT EXISTS (SELECT 1 FROM enrollments WHERE student_id=$1 AND course_id=$2)",
             [student_id, course_id]
         )
 
